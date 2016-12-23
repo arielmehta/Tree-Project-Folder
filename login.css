@@ -1,0 +1,81 @@
+body{
+	background-image: url("Images/backgroundroad.jpg");
+    height: 100%;
+}
+
+h1{
+	text-align: center;
+    padding-top: 4vw;
+}
+
+#firebaseui-auth-container {
+    margin-top: 1vw;
+}
+
+#menuicon {
+    float: right;
+    padding: 1vw;
+    width: 5vw;
+    height: 5vw;
+    z-index: 5;
+}
+
+#menucontainer {
+    position: absolute;
+    text-align: right;
+    width: 13vw;
+    z-index: 5;
+    height: auto;
+    right: 0;
+}
+
+#menuicon:hover {
+    opacity: 0.5;
+}
+
+#menubox {
+    z-index: 4;
+    width: 13vw;;
+    margin-top: 5vw;
+    height: auto;
+}
+
+#menu {
+    background:rgba(1,1,1,0.5);
+    color: white;
+    padding: 0.8vw;
+    padding-right: 1.2vw;
+    margin: 0;
+    width: 13vw;
+    font-size: 1.2vw;
+    display: block;
+}
+
+#menu:hover {
+    background: rgba(1,1,1,0.7) !important;
+}
+
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        #menuicon {
+            width: 11vw;
+            height: 11vw;
+        }
+        
+        #menu {
+            font-size: 6.3vw !important;
+            padding: 3vw !important;
+            width: 55vw !important;
+            background:rgba(1,1,1,0.7) !important;
+        }
+        
+        #menubox {
+            margin-top: 11vw !important;
+            width: 55vw !important;
+        }
+        
+        #menucontainer {
+            width: 55vw !important;
+        }
+}

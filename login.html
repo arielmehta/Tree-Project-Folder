@@ -1,0 +1,60 @@
+<! DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<!-- Firebase links -->
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+
+    <!-- custom app links -->
+<script type="text/javascript" src="mainfirebase.js"></script>
+<script type="text/javascript" src="login.js"></script>
+<link rel = "stylesheet" href= "Project_Zika_Styles.css">
+<link rel = "stylesheet" href= "DataPageFirebase.css">
+<link rel = "stylesheet" href= "login.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+	<body>
+        <script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>
+        
+		<nav id="menucontainer">
+                <a href="#" onclick="toggle_visibility('menubox');">
+                    <img src="Images/menu.png" id="menuicon"/>
+                </a>
+            <div id="menubox" style="display: none">
+				<a id="menu" href = "index.html"> Home </a>
+				<a id="menu" href = "login.html"> Enter New Data </a>
+        <a id="menu" href = "full_map.html"> Map </a>
+        <a id="menu" href = "Procedures.html"> How to Set Up Traps </a>
+				<a id="menu" href = "DisplayData.html"> Active Traps List </a>
+				<a id="menu" href = "PostsandUpdates.html"> Posts and Updates </a>
+				<a id="menu" href = "DataAnalysis.html"> Data Analysis </a>
+				<a id="menu" href = "AboutUs.html"> About Us</a>
+				<a id="menu" href = "Photos.html"> Photos </a>
+        <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
+				<a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+            </div>
+		</nav>
+
+
+    <h1 style = "font-family:Abel !important"> Log In To Enter Data </h1>
+    <div id="firebaseui-auth-container"></div>
+</body>
+        

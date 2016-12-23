@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <meta charset="utf-8">
+
+    <!-- Firebase links -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script type="text/javascript" src="mainfirebase.js"></script>
+        <title>Enter Data</title>
+        <link rel="stylesheet" href="EnterData3.css">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>
+        
+        <h1>Trap Modifications</h1>
+        <p id="click">Click on the Icons For Drop-down Selection</p>
+        <form class = "Trap_Setup_Form2" action = "EnterData4.html"> <!-- onsubmit = "writeStartUserData2()" -->
+        <p id="modsorno">Modifications or No Modifications:</p>
+            <div id="modificationpp">
+            <select id="modificationss">
+            <option style = "font-family: Abel" value = "modifications">modifications</option>
+            <option style = "font-family: Abel" value = "no modifications">no modifications</option>
+            </select>
+            </div>
+            <table>
+            <p id="mods">If You Added Modifications...</p>
+                <tr>
+                    <td style="vertical-align: top">
+                        <div id="box">
+                        <img src="Images/flowericon.png" id="largeicons"/>
+                        <a href="#" onclick="toggle_visibility('showhide1');">
+                        <input type="radio" name="mod" id="nature" value="natural"><br>
+                        </a>
+                        <label for="nature">Natural Materials in Cup</label>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top">
+                        <div id="box">
+                        <img src="Images/shirticon.png" id="largeicons"/>
+                        <a href="#" onclick="toggle_visibility('showhide2');">
+                        <input type="radio" name="mod" id="notnature" value="unnatural"><br>
+                        </a>
+                        <label for="notnature">Synthetic Materials in Cup</label>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top">
+                        <div id="box">
+                        <img src="Images/plus.png" id="largeicons"/>
+                        <a href="#" onclick="toggle_visibility('showhide3');">
+                        <input type="radio" name="mod" id="paper" value="paper"><br>
+                        </a>
+                        <label for="paper">Other Modifications</label>
+                        </div>
+                    </td>
+                </tr> 
+                <tr>
+                    <td style="vertical-align: top">
+                        <div id="showhide1" style="display:none;">
+                        <div id="smallbox">
+                            <img src="Images/leaficon.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext1');">
+                            <input class = "one" id = "leaf" type="checkbox" name="natureoptions" id="leaves" value = "vegetation(leaves)">
+                            <label for="leaves" id="options">Leaves</label><br>
+                            </a>
+                            <div id="othertext1" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "leaff" id = "others" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/flower2.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext2');">
+                            <input id = "flower" type="checkbox" name="natureoptions" id="flowers" value = "vegetation(flowers)">
+                            <label for="flowers" id="options">Flowers</label>
+                            </a>
+                            <div id="othertext2" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "flowerr" id = "others" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/trashicon.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext3');">
+                            <input class = "one" id = "compost" type="checkbox" name="natureoptions" id="trash" value = "food/compost">
+                            <label for="trash" id="options">Compost / Food</label>
+                            </a>
+                            <div id="othertext3" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "compostt" id = "others" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div> 
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/treeicon.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext4');">
+                            <input class = "one" type="checkbox" name="natureoptions" id="other">
+                            </a>
+                            <label for="other" id="options">Other</label>  
+                            <div id="othertext4" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "otherr" id = "others" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top">
+                        <div id="showhide2" style="display: none">
+                        <div id="smallbox">
+                            <img src="Images/perfume.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext11');">
+                            <input type="checkbox" name="syntheticoptions" id="perfume">
+                            </a>
+                            <label for="perfume" id="options">Fragrance</label>
+                            <div id="othertext11" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "fragrancee" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>   
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/shirticon1.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext12');">
+                            <input type="checkbox" name="syntheticoptions" id="clothing">
+                            </a>
+                            <label for="clothing" id="options">Clothing / Human Scents</label>
+                            <div id="othertext12" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "clothingg" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div> 
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/treeicon1.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('othertext13');">
+                            <input type="checkbox" name="syntheticoptions" id="other1">
+                            </a>
+                            <label for="other1" id="options">Other</label>  
+                            <div id="othertext13" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "otherss" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top">
+                        <div id="showhide3" style="display: none">
+                        <div id="smallbox">
+                            <img src="Images/coloricon.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('colortext');">
+                            <input type="checkbox" name="trapoptions" id="color">
+                            </a>
+                            <label for="color" id="options">Color Change</label>  
+                            <div id="colortext" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "colorss" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>
+                        <div id="smallbox">
+                            <img src="Images/pattern.png" id="smallicons"/>
+                            <a href="#" onclick="toggle_visibility('patterntext');">
+                            <input type="checkbox" name="trapoptions" id="pattern">
+                            </a>
+                            <label for="pattern" id="options">Pattern Change</label>  
+                            <div id="patterntext" style= "display: none">
+                            <p style="font-size: 1.1vw">Please specify:</p>
+                            <input id = "patternss" type="text" style="font-family: Abel, sans-serif; font-size: 1.2vw">
+                            </div>
+                        </div>    
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="nextbutton" style="margin: auto">
+                <input type="submit" value="Submit Modification Data and Continue" id="nextbutton1">
+            </div>
+        </form>
+
+        <div id="iconcredit">
+        <p>Icons from IconFinder designers: <a href="https://www.iconfinder.com/olgakozachenko">Olha Kozachenko</a>, <a href="https://www.iconfinder.com/webalys">Webalys</a>, <a href="https://www.iconfinder.com/dariusdan">Darius Dan</a>, <a href="https://www.iconfinder.com/Zerg">Sergei Kokota</a>, <a href="https://www.iconfinder.com/webhostingmedia">David Cross</a>, <a href="http://www.elegantthemes.com/">Nick Roach</a>, <a href="https://www.iconfinder.com/hirenvanza">hiren vanza</a></p>
+        </div>
+
+    </body>
+</html>

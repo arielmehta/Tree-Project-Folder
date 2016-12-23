@@ -1,0 +1,46 @@
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+#thanks {
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 4vw;
+}
+
+#return {
+    text-align: center;
+    font-size: 3vw;
+    width: 35vw;
+    margin: auto;
+    padding: 1vw;
+    background-color: #9cded7;
+    border-radius: 5vw;
+}
+
+#return:hover {
+    opacity: 0.6;
+}
+
+#returntext {
+    text-decoration: none;
+    color: black;
+}
+#warning {
+    float: center;
+    width: 6vw;
+    margin-left: 5%;
+    margin-top: 10%
+}
+
+#warningtext {
+    float: center;
+    text-align: center;
+    clear: both;
+    margin-right: 3%;
+    width: 16%;
+    font-size: 2.2vw;
+}
+.message{
+    transform: translateX(44%);
+}

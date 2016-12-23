@@ -1,0 +1,237 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+    position: relative;
+    padding-bottom: 2.7em;
+    min-height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+/* Navigation bar css */
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        #menuicon {
+            width: 11vw;
+            height: 11vw;
+        }
+        
+        #menu {
+            font-size: 6.3vw !important;
+            padding: 3vw !important;
+            width: 55vw !important;
+            background:rgba(1,1,1,0.7) !important;
+        }
+        
+        #menubox {
+            margin-top: 11vw !important;
+            width: 55vw !important;
+        }
+        
+        #menucontainer {
+            width: 55vw !important;
+        }
+}
+
+#menuicon {
+    float: right;
+    padding: 1vw;
+    width: 5vw;
+    height: 5vw;
+    z-index: 5;
+}
+
+#menucontainer {
+    position: absolute;
+    text-align: right;
+    width: 13vw;
+    z-index: 5;
+    height: auto;
+    right: 0;
+}
+
+#menuicon:hover {
+    opacity: 0.5;
+}
+
+#menubox {
+    z-index: 4;
+    width: 13vw;;
+    margin-top: 5vw;
+    height: auto;
+}
+
+#menu {
+    background:rgba(1,1,1,0.5);
+    color: white;
+    padding: 0.8vw;
+    padding-right: 1.2vw;
+    margin: 0;
+    width: 13vw;
+    font-size: 1.2vw;
+    display: block;
+}
+
+#menu:hover {
+    background: rgba(1,1,1,0.7) !important;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 1.4vw;
+    color: white;
+    text-align: center;
+    padding: 1vw 3.5vw;
+    text-decoration: none;
+    text-decoration: bold;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.navigation {
+    margin-top: 0px;
+    font-family: Abel;
+}
+
+.pagetitles {
+    font-family: Abel;
+    text-align: left;
+    margin-top: 3vw; 
+    text-align: center;
+    margin-left: 0;
+    font-size: 5vw;
+}
+
+footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2.7em;
+    clear: both;
+    float: left;
+}
+
+* {box-sizing:border-box}
+
+#slideshowpicture {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    margin: auto;
+    position: relative;
+    top: 4vw;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80vw;
+    height: 53.4vw;
+    display: block;
+}
+
+#arrow {
+    width: 5vw;
+    padding: 0.5vw;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -3vw;
+    font-weight: bold;
+    transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0
+}
+
+.prev {
+    left: 0;
+}
+
+/* On hover, button becomes see-through */
+.prev:hover, .next:hover {
+    opacity: 0.3;
+}
+
+/* The dots/bullets/indicators */
+#dots {
+    text-align: center;
+    padding-top: 0.5vw;
+    margin-top: 4vw;
+}
+
+.dot {
+    cursor: pointer;
+    height: 0.8vw;
+    width: 0.8vw;
+    background-color: #ccf4ed;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center;
+    transition: 0.4s ease;
+}
+
+.active, .dot:hover {
+  background-color: #80e5d4;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .slprev, .slnext,.text {font-size: 11px}
+}

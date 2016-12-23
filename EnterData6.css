@@ -1,0 +1,118 @@
+body {
+    font-family: Abel, sans-serif;
+}
+
+table {
+    margin: auto;
+}
+
+.titless{
+    margin-top: 0.6vw;
+    margin-bottom: 0vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 3vw;
+}
+
+#find {
+    text-decoration: none;
+    color: black;
+    background-color: #c6ece8;
+    padding: 1vw;
+    font-size: 1.4vw;
+    border-radius: 5vw;
+}
+
+#findbutton {
+    margin:auto;
+    margin-bottom: 1.5vw;
+}
+
+#findbutton:hover {
+    opacity: 0.7;
+}
+
+#left {
+    padding: 4vw;
+    font-size: 1.3vw;
+}
+
+#container {
+    margin: auto;
+}
+
+#dates {
+    font-size: 2vw;
+    padding: 3.5vw;
+}
+
+#dataentries {
+    font-size: 1.5vw;
+}
+
+#help {
+    font-size: 1.2vw;
+    width: 16vw;
+    margin: auto;
+}
+
+a {
+    color: black;
+}
+
+#rafts {
+    background-color: #ceeee2;
+    padding: 5vw;
+    text-align: center;
+}
+
+#eggs {
+    background-color: #cae7c4;
+    padding: 5vw;
+    text-align: center;
+}
+
+#total {
+    background-color: #c4e7d0;
+    padding: 5vw;
+    text-align: center;
+}
+
+#species {
+    background-color: #c6ece8;
+    padding: 5vw;
+    text-align: center;
+}
+
+#find1 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#find1:hover {
+    opacity: 0.7;
+}
+
+#last{
+    width: 100%;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#submitbutton{
+    font-family: Abel;
+    font-size: 1.7vw;
+    background-color: white;
+    margin-top: 1vw;
+}
+
+#submitbutton:hover {
+    opacity: 0.7;
+}
+
+#submit {
+    text-align: center;
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <head>
+        <title>Posts and Updates</title>
+        <link rel="stylesheet" href="PostsandUpdates.css">
+
+<link rel="stylesheet" href="Project_Zika_Styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+    </head>
+        
+        <script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>
+        
+        <!--Top navigation bar-->
+
+    <body>
+        <nav id="menucontainer">
+                <a href="#" onclick="toggle_visibility('menubox');">
+                    <img src="Images/menu.png" id="menuicon"/>
+                </a>
+            <div id="menubox" style="display: none">
+				<a id="menu" href = "index.html"> Home </a>
+				<a id="menu" href = "login.html"> Enter New Data </a>
+                <a id="menu" href = "full_map.html"> Map </a>
+                <a id="menu" href = "Procedures.html"> How to Set Up Traps </a>
+				<a id="menu" href = "DisplayData.html"> Active Traps List </a>
+				<a id="menu" href = "PostsandUpdates.html"> Posts and Updates </a>
+				<a id="menu" href = "DataAnalysis.html"> Data Analysis </a>
+				<a id="menu" href = "AboutUs.html"> About Us</a>
+				<a id="menu" href = "Photos.html"> Photos </a>
+                <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
+				<a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+            </div>
+		</nav>
+        <div class = "parallax">
+        <div id="titlebox">
+        </div>
+        <div id="titletext">
+            <div id="realtitletext">
+            <h1 class="titless" style = "font-family:Abel !important; display: inline !important ">Posts and Updates</h1>
+            </div>
+        </div>
+            </div>
+        <div class = "parallax2"></div>
+    <div class = "parallaxs">
+<div class = "numbaone">
+        <div id="procedurelink" style = "transform: translateY(3vw)">
+            <a id="procedurelinktext" href="Procedures.html" target="_blank">Click here to learn how to set up traps.</a>
+        </div>
+        
+        <form>
+        <table id="identification" style="width:80%">
+            <colgroup>
+                <col style="width: 33%"/>
+                <col style="width: 33%"/>
+                <col style="width: 33%"/>
+            </colgroup>
+            <tr>
+                <th colspan="3" id="idtitle" style = "font-family:Abel !important">Identifying Mosquitoes and Eggs</th>
+            </tr>
+            <tr>
+                <td style="vertical-align: top">
+                    <div id="box" style="text-align: center">
+                    <div id="anophelestitle">Anopheles</div>
+                    <a href="#" onclick="toggle_visibility('anophelesdescription');">
+                    <input type="checkbox" name="genus" id="anopheles"><br>
+                    </a>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="box" style="text-align: center">
+                    <div id="aedestitle">Aedes</div>
+                    <a href="#" onclick="toggle_visibility('aedesdescription');">
+                    <input type="checkbox" name="genus" id="anopheles"><br>
+                    </a>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="box" style="text-align: center">
+                    <div id="culextitle">Culex</div>
+                    <a href="#" onclick="toggle_visibility('culexdescription');">
+                    <input type="checkbox" name="genus" id="culex"><br>
+                    </a>
+                    </div>                   
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top">
+                    <div id="anophelesdescription" style="display: none">
+                        <div id="minibox" style="text-align: center">
+                        <div id="anopheleseggtitle">Eggs</div>
+                        <a href="#" onclick="toggle_visibility('anopheleseggs');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="anopheleseggs" style="display: none">
+                            <img src="Images/anopheleseggs.jpg" id="eggpicture"/>
+                            <p id="iddescription">Anopheles mosquitoes lay more than a hundred eggs at a time. Eggs are separate but will sometimes drift together.</p>
+                        </div>
+                        <div id="minibox" style="text-align: center">
+                        <div id="anophelesadulttitle">Adult</div>
+                        <a href="#" onclick="toggle_visibility('anophelesadult');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="anophelesadult" style="display: none">
+                            <img src="Images/anophelesadult.png" id="adultpicture"/>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="aedesdescription" style="display: none">
+                        <div id="minibox" style="text-align: center">
+                        <div id="aedeseggtitle">Eggs</div>
+                        <a href="#" onclick="toggle_visibility('aedeseggs');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="aedeseggs" style="display: none">
+                            <img src="Images/aedeseggs.jpg" id="eggpicture"/>
+                            <p id="iddescription">Aedes eggs look like black grains of rice. These eggs can survive through cold temperatures and hatch when conditions are right.</p>
+                        </div>
+                        <div id="minibox" style="text-align: center">
+                        <div id="aedesadulttitle">Adult</div>
+                        <a href="#" onclick="toggle_visibility('aedesadult');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="aedesadult" style="display: none">
+                            <img src="Images/aedesadult.PNG" id="adultpicture1"/>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="culexdescription" style="display: none">
+                        <div id="minibox" style="text-align: center">
+                        <div id="culexeggtitle">Eggs</div>
+                        <a href="#" onclick="toggle_visibility('culexeggs');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="culexeggs" style="display: none">
+                            <img src="Images/culexeggs.jpg" id="eggpicture"/>
+                            <p id="iddescription">Culex mosquitoes lay hundreds of eggs at a time. Eggs are connected to form a raft, which floats on the surface of still water.</p>
+                        </div>
+                        <div id="minibox" style="text-align: center">
+                        <div id="culexadulttitle">Adult</div>
+                        <a href="#" onclick="toggle_visibility('culexadult');">
+                        <input type="radio" name="options"><br>
+                        </a>
+                        </div>
+                        <div id="culexadult" style="display: none">
+                            <img src="Images/culexadult.PNG" id="adultpicture1"/>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </form>
+</div> 
+        <div class = "parallax2"></div>
+<div class = "parallaxd">
+        <div id="countbox">
+        <table id="count" style="width:80%">
+            <colgroup>
+                <col style="width: 33%"/>
+                <col style="width: 33%"/>
+                <col style="width: 33%"/>
+            </colgroup>
+            <th id="counttitle" colspan="3">How to Count Mosquito Eggs</th>
+            <tr>
+                <td style="vertical-align: top">
+                    <div id="minibox1">
+                        <h3 id=numbertitle style = "font-family:Abel !important">1</h3>
+                        <h2 id="numbersubtitle" style = "font-family:Abel !important">Count Egg Rafts</h2>
+                        <img id="countpic" src="Images/eggraft.jpg"/>
+                        <p id="countdescription">In the above picture, the cluster of eggs counts as one egg raft. Note the number of egg rafts, then count the number of eggs that make up that raft.</p>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="minibox2">
+                        <h3 id=numbertitle style = "font-family:Abel !important">2</h3>
+                        <h2 id="numbersubtitle" style = "font-family:Abel !important">Count Individual Eggs</h2>
+                        <img id="countpic" src="Images/egg.jpg"/>
+                        <p id="countdescription">Count the number of individual eggs- these are the eggs floating around by themselves.</p>
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    <div id="minibox3">
+                        <h3 id=numbertitle style = "font-family:Abel !important">3</h3>
+                        <h2 id="numbersubtitle1" style = "font-family:Abel !important">Calculate Total</h2>
+                        <img id="countpic1" src="Images/calculator.png"/>
+                        <p id="countdescription">Add up the number of eggs in the rafts with the number of individual eggs to obtain your total.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+</div>       
+        <table class="timeline" style = "background-color: black; opacity: 0.7; color: white; transform: translateY(3vw)">
+            <colgroup>
+                <col style="width: 30%"/>
+                <col style="width: 70%"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <td colspan="2" id="timelinetitle">Zika Timeline</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="timelinesubtitle">Information from World Health Organization</td>
+                </tr>
+            </thead>
+            <tr>
+                <td id="date1" class="left">
+                    1947
+                </td>
+                <td id="event1" class="right">
+                    Scientists isolate the Zika virus in samples taken from a rhesus monkey in the Zika Forest of Uganda, Africa.
+                </td>
+            </tr>
+            <tr>
+                <td id="date2" class="left">
+                    1948
+                </td>
+                <td id="event2" class="right">
+                    The Zika virus is recovered from the mosquito Aedes africanus in the Zika forest.
+                </td>
+            </tr>
+            <tr>
+                <td id="date3" class="left">
+                    1952
+                </td>
+                <td id="event3" class="right">
+                    First human cases are confirmed in Uganda and the United Republic of Tanzania.
+                </td>
+            </tr>
+            <tr>
+                <td id="date4" class="left">
+                    1969-1983
+                </td>
+                <td id="event4" class="right">
+                    Zika spreads to India, Indonesia, Malaysia, and Pakistan, through mosquito vectors.
+                </td>
+            </tr>
+            <tr>
+                <td id="date5" class="left">
+                    2007
+                </td>
+                <td id="event5" class="right">
+                    First Zika outbreak in humans occurs in the Pacific Islands of Yap in the Federated States of Micronesia.
+                </td>
+            </tr>
+            <tr>
+                <td id="date6" class="left">
+                    2008
+                </td>
+                <td id="event6" class="right">
+                    A US scientist infected with Zika infects his wife, confirming that the virus can be sexually transmitted.
+                </td>
+            </tr>
+            <tr>
+                <td id="date7" class="left">
+                    2013-2014
+                </td>
+                <td id="event7" class="right">
+                    Outbreaks occur in the Pacific Islands of French Polynesia, Easter Island, the Cook Islands, and New Caledonia.
+                </td>
+            </tr>
+            <tr>
+                <td id="date8" class="left">
+                    2015
+                </td>
+                <td id="event8" class="right">
+                    Brazil declares a national public health emergency as number of microcephaly cases rises.
+                </td>
+            </tr>
+            <tr>
+                <td id="date9" class="left">
+                    Feb 2016
+                </td>
+                <td id="event9" class="right">
+                    The US reports two sexually transmitted cases of Zika virus.
+                </td>
+            </tr>
+            <tr>
+                <td id="date10" class="left">
+                    Aug 2016
+                </td>
+                <td id="event10" class="right">
+                    CDC issues travel warning over Miami Zika outbreak.
+                </td>
+            </tr>
+        </table>
+        
+<div class="FAQcontainer" >
+    <table>
+        
+    </table>
+</div>    
+<!--Slideshow HTML-->        
+<div class="slideshow-container" style = "transform: translateY(-5vw)">
+    <div class="mySlides fade">
+        <div id="vectorbox">
+            <div id="vectorbackground">
+            <p id="vectortitle">vector-</p>
+            <p id="vectordefinition">(n.) An organism, typically a biting insect or tick, that transmits a disease or parasite from one animal or plant to another.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div id="zikabox">
+          <div id="zikabackground">
+            <p id="zikatitle">Zika-</p>
+            <p id="zikadefinition">(n.) An illness caused by a chiefly mosquito-borne virus of the genus Flavivirus, typically characterized by mild fever, rash, and joint pain, also known to cause microcephaly and Guillain-Barre Syndrome.</p>
+          </div>
+        </div>
+    </div>
+    
+    <div class="mySlides fade">
+          <div id="microbox">
+              <div id="microbackground">
+                <p id="microtitle">microcephaly-</p>
+                <p id="microdefinition">my-kroh-SEF-uh-lee<br>(n.) Abnormal smallness of the head associated with incomplete brain development.</p>
+              </div>
+            </div>
+    </div>
+    
+    <div class="mySlides fade">
+          <div id="syndromebox">
+              <div id="syndromebackground">
+                <p id="syndrometitle">Guillain-Barre syndrome</p>
+                <p id="syndromedefinition">gee-YAH-buh-RAY<br>(n.) A rare disorder in which the body's immune system attacks part of the nervous system.</p>
+              </div>
+            </div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">
+        <img src="Images/leftarrow.png" id="arrow"/>
+    </a>
+    <a class="next" onclick="plusSlides(1)">
+        <img src="Images/rightarrow.png" id="arrow"/>
+    </a>
+    <div id="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>  
+    </div>
+
+</div>
+<br>
+       </div>
+<!--End of slideshow HTML--> 
+<!-- JavaScript for slideshow -->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- End of JavaScript for slideshow -->
+        <div class = "parallaxs2" style = "transform: translateY(-5vw)">
+<div class="FAQcontainer" style = "background-color: black; opacity: 0.7; color: white; transform: translateY(-35vw)">
+    <p id="FAQtitle">Frequently Asked Questions</p>
+    <section>
+      <article>
+        <details>
+          <summary>How do I know if I have Zika?</summary>
+            <p>Symptoms include fever, skin rash, muscle or joint pain, headache, and conjunctivitis (pink eye). The only way to know for certain if you are infected is to be medically tested.</p>
+        </details>
+        <details>
+          <summary>How can I protect myself from Zika?</summary>
+          <p>Mosquitoes that spread Zika virus usually bite during the daytime. Protect yourself with insect repellent, and if going outdoors for extended periods, treat your clothing and gear with permethrin. Avoid traveling to areas where Zika is spreading.</p>
+        </details>
+        <details>
+          <summary>How is Zika transmitted?</summary>
+            <p><b>Mosquito bites</b></p>
+            <p>The <i>Aedes</i> species of mosquito (<i>Ae. aegypti</i> and <i>Ae. albopictus</i>) are primary vectors for transmitting Zika to humans. This species also spreads dengue and chikungunya viruses.</p>
+            <p><b>From mother to child</b></p>
+            <p>A fetus can obtain the Zika virus from its mother during pregnancy, leading to microcephaly. However, infants cannot get the virus through breastfeeding.</p>
+            <p><b>Through sex</b></p>
+            <p>Zika can be spread through sex even if the infected person does not show symptoms.</p>
+            <p>Zika can also be spread through blood transfusion and laboratory exposure.</p>
+        </details>
+        <details>
+            <summary>Is there a cure?</summary>
+            <p>Currently, there is no cure or vaccine for Zika.</p>
+        </details>
+          <p id="courtesy">Information from CDC</p>
+      </article>
+    </section>
+</div>
+        </div>
+<div class = "parallaxs2" style = "transform: translateY(-5vw); margin-bottom: 0vw">
+        <div class="mosquitoes" style = "transform: translateY(-40vw); background-color: black; opacity: 0.6">
+            <p id="mosquitotitle" style = "color: white">Information from the CDC</p>
+            <div> 
+			<ul class="mosquitonavbar" style = "opacity: 1"> 
+				<li><a href="http://www.cdc.gov/zika/about/index.html" target="_blank" id="anatomy" class="mosquitolink">About Zika</a></li>
+				<li><a href="http://www.cdc.gov/zika/geo/index.html" target="_blank" id="habitats" class="mosquitolink">Areas with Zika</a></li>
+				<li><a href= "http://www.cdc.gov/zika/vector/index.html" target="_blank" id="species" class="mosquitolink">Mosquito Control</a></li>
+				<li><a href = "http://www.cdc.gov/zika/healtheffects/index.html" target="_blank" id="lifecycle" class="mosquitolink">Health Effects and Risks</a></li>
+				<li><a href = "http://www.cdc.gov/zika/prevention/index.html" target="_blank" id="diseases" class="mosquitolink">Prevention</a></li>
+			</ul>
+		    </div>
+        </div>
+        </div>
+        </body>
+</html>

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Pathway Gothic One');
+
+#data_table{
+   font-family: Abel;
+   display: table;
+   width: 100vw;
+   margin-top: 1em;
+  margin: auto;
+    width: auto;
+}
+
+#subtitle{
+   margin-left: 40vw;
+   font-size: 3vw;
+}
+}
+.header-container, .session-container{
+   display: table-row;
+   width: 100vw;
+}
+
+.header-date, .header-pos, .header-lat, .header-type,
+.header-weath,
+.one, .two, .three, .four,
+.six{
+   display: table-cell;
+   border: 0.1vw solid;
+   border-collapse: collapse;
+   margin: 1px 1px 1px 1px;
+   padding-top: 1vw;
+
+
+}
+.header-date, .header-pos, .header-lat, .header-type,
+.header-weath{
+   background-color: #c6ece8;  
+}
+
+
+.header-date, .header-pos, .header-lat, .header-type,
+.header-weath,
+.one, .two, .three, .four,
+.six{
+   text-align: center;
+   width: 11vw;
+   height: 7vw;
+   font-size: 2vw;
+
+/*}
+.header-type, .one {
+   width: 8.3vw;
+   height: 7vw;
+   font-size: 2vw;
+}
+.header-date, .two {
+   width: 8.3vw;
+   height: 7vw;
+   font-size: 2vw;
+}
+.header-pos, .three{
+   width: 8.3vw;
+   height: 7vw;
+   font-size: 2vw;
+}
+.header-lat, .four{
+   width: 8.3vw;
+   height: 7vw;
+   font-size: 2vw;
+}
+.header-weath, .six {
+   width: 8.3vw;
+   height: 7vw;
+   font-size: 2vw;
+}*/
+
+

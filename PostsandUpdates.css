@@ -1,0 +1,902 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Abel, sans-serif !important;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.parallaxd { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 1 !important;
+    /* Set a specific height */
+    height: 40vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2s { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 1 !important;
+    /* Set a specific height */
+    height: 10vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallaxs2 { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 0.7 !important;
+    /* Set a specific height */
+    height: 50vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bottomchunck{
+    background-color: black;
+}
+
+
+/* Navigation bar css */
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        #menuicon {
+            width: 11vw;
+            height: 11vw;
+        }
+        
+        #menu {
+            font-size: 6.3vw !important;
+            padding: 3vw !important;
+            width: 55vw !important;
+            background:rgba(1,1,1,0.7) !important;
+        }
+        
+        #menubox {
+            margin-top: 11vw !important;
+            width: 55vw !important;
+        }
+        
+        #menucontainer {
+            width: 55vw !important;
+        }
+}
+#menuicon {
+    float: right;
+    padding: 1vw;
+    width: 5vw;
+    height: 5vw;
+    z-index: 5;
+}
+
+#menucontainer {
+    position: absolute;
+    text-align: right;
+    width: 13vw;
+    z-index: 5;
+    height: auto;
+    right: 0;
+}
+
+#menuicon:hover {
+    opacity: 0.5;
+}
+
+#menubox {
+    z-index: 4;
+    width: 13vw;;
+    margin-top: 5vw;
+    height: auto;
+}
+
+#menu {
+    background:rgba(1,1,1,0.5);
+    color: white;
+    padding: 0.8vw;
+    padding-right: 1.2vw;
+    margin: 0;
+    width: 13vw;
+    font-size: 1.2vw;
+    display: block;
+}
+
+#menu:hover {
+    background: rgba(1,1,1,0.7) !important;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+}
+
+li a {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 1.4vw;
+    color: white;
+    text-align: center;
+    padding: 1vw 3.5vw;
+    text-decoration: none;
+    text-decoration: bold;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    font-family: Abel;
+}
+
+footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2.7em;
+    clear: both;
+    float: left;
+}
+
+/*End of Navigation bar css */
+
+img, div {
+    display: block;
+}
+
+.titless {
+    text-align: center;
+    font-size: 7vw;
+    color: white;
+    z-index: 2;
+    vertical-align: middle;
+    
+}
+
+#titlebox {
+    position: absolute;
+    z-index: -1;
+    height: 30vw;
+    width: 100%;
+}
+
+#titletext {
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 30vw;
+    opacity: 0.7;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+}
+
+#realtitletext {
+    vertical-align: middle;
+    width: 50%;
+    transform: translateX(50%);
+    display: table-cell;
+    width: 100%;
+    height: 30vw;
+}
+
+/*News*/
+.news {
+    z-index: 1;
+    margin-top: 30vw;
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: solid 0.2vw black;
+    padding-top: 2vw;
+}
+
+td {
+    padding: 1vw;
+}
+
+.badnews {
+    border-right: solid 0.2vw black;
+}
+
+#badnewslinks {
+    border-right: solid 0.2vw black;
+}
+
+.mosquitolink {
+    text-decoration: none;
+    color: black;
+}
+
+.newslink:hover {
+    background-color: #d2ebcc;
+}
+
+#newsheadings {
+    font-size: 4vw;
+}
+
+#newslink {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vw;
+}
+
+#newslinks {
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    border-bottom: solid 0.1vw black;
+}
+/*End of News*/
+
+#procedurelink {
+    margin: auto;
+    width: 40vw;
+    text-align: center;
+    margin-top: 5vw;
+}
+
+#procedurelinktext {
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: black;
+    background-color: #def2da;
+    border-radius: 5vw;
+    padding: 1.5vw;
+}
+.parallaxs{
+    transform: translateY(-5vw);
+}
+#procedurelink:hover {
+    opacity: 0.6;
+}
+
+/*Identification Guide*/
+#identification {
+    margin: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+#idtitle {
+    font-size: 3vw;
+    color: white;
+    border-bottom: none;
+}
+
+input[name="genus"] {
+    width: 15vw;
+    height: 15vw;
+    z-index: 1;
+    opacity: 0;
+}
+
+.numbaone{
+    margin-top: 0vw;
+    background-color: black;
+    opacity: 0.9;
+}
+
+#box {
+    margin: auto;
+    width: 15vw;
+}
+
+#box:hover {
+    opacity: 0.7;
+}
+
+#anophelestitle {
+    z-index: -1;
+    position: absolute;
+    background-color: #a9e0cb;
+    font-size: 2.4vw;
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    padding-top: 5.8vw;
+    border-radius: 50%;
+}
+
+#aedestitle {
+    z-index: -1;
+    position: absolute;
+    background-color: #c6ece8;
+    font-size: 2.4vw;
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    padding-top: 5.8vw;
+    border-radius: 50%;
+}
+
+#culextitle {
+    z-index: -1;
+    position: absolute;
+    background-color: #cae7c4;
+    font-size: 2.4vw;
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    padding-top: 5.8vw;
+    border-radius: 50%;
+}
+
+#minibox {
+    margin: auto;
+    width: 12vw;
+    height: 2vw;
+}
+
+#minibox:hover {
+    opacity: 0.7;
+}
+
+#anopheleseggtitle {
+    font-size: 1.6vw;
+    width: 12vw;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    height: 2vw;
+    background-color: #96d9c0;
+    border-radius: 5%;
+}
+
+#aedeseggtitle {
+    font-size: 1.6vw;
+    width: 12vw;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    height: 2vw;
+    background-color: #b3e6e0;
+    border-radius: 5%;
+}
+
+#culexeggtitle {
+    font-size: 1.6vw;
+    width: 12vw;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    height: 2vw;
+    background-color: #bae0b2;
+    border-radius: 5%;
+}
+
+#eggpicture {
+    width: 13vw;
+    margin: auto;
+    margin-top: 1vw;
+    border-radius: 5%;
+}
+
+input[name="options"] {
+    z-index: 1;
+    opacity: 1;
+    width: 12vw;
+    height: 3vw;
+    opacity: 0;
+}
+
+#anophelesadulttitle {
+    z-index: -1;
+    background-color: #83d2b5;
+    font-size: 1.6vw;
+    width: 12vw;
+    height: 2vw;
+    position: absolute;
+    margin-top: 1vw;
+    border-radius: 5%;
+}
+
+#aedesadulttitle {
+    z-index: -1;
+    background-color: #a0e0d8;
+    font-size: 1.6vw;
+    width: 12vw;
+    height: 2vw;
+    position: absolute;
+    margin-top: 1vw;
+    border-radius: 5%;
+}
+
+#culexadulttitle {
+    z-index: -1;
+    background-color: #aad9a0;
+    font-size: 1.6vw;
+    width: 12vw;
+    height: 2vw;
+    position: absolute;
+    margin-top: 1vw;
+    border-radius: 5%;
+}
+
+#adultpicture {
+    width: 13vw;
+    margin: auto;
+    margin-top: 4vw;
+    border-radius: 5%;
+}
+
+#adultpicture1 {
+    width: 12vw;
+    margin: auto;
+    margin-top: 4vw;
+    border-radius: 5%;
+}
+
+#iddescription {
+    color: white;
+    font-size: 1.3vw;
+}
+/*End of Identification Guide*/
+
+
+/*Counting Guide*/
+#countbox {
+    width: 90%;
+    margin: auto;
+    opacity: 1 !important;
+    background-color: #def2da;
+}
+
+#count {
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#counttitle {
+    border-bottom: none;
+    font-size: 3vw;
+}
+
+#countdescription {
+    font-size: 1.3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#numbertitle {
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0;
+}
+
+#numbersubtitle {
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 0.2vw;
+}
+
+#numbersubtitle1 {
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 0.2vw;
+    margin-bottom: 0;
+}
+
+#countpic {
+    width: 80%;
+    margin: auto;
+}
+
+#countpic1 {
+    width: 70%;
+    margin: auto;
+}
+/*End of Counting Guide */
+/*Mosquito Info*/
+.mosquitoes {
+    width: 50%;
+    float: right;
+    clear: both;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: block;
+}
+
+#mosquitotitle {
+    text-align: center;
+    font-size: 3.5vw;
+    margin-top: 2vw;
+}
+
+.mosquitonavbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    transform: translateY(-3vw);
+}
+
+.mosquitolink {
+    float: none;
+    display: block;
+    font-size: 1.4vw;
+    color: black;
+    text-align: center;
+    padding: 0.6vw 4vw;
+    text-decoration: none;
+    border-bottom: solid white 0.2vw;
+}
+
+#anatomy {
+    background-color: #84d2b4;
+}
+
+#anatomy:hover {
+    background-color: #71cca9;
+}
+
+#habitats {
+    background-color: #96d9c0;
+}
+
+#habitats:hover {
+    background-color: #84d2b4;
+}
+
+#species {
+    background-color: #a9e0cb;
+}
+
+#species:hover {
+    background-color: #96d9c0;
+}
+
+#lifecycle {
+    background-color: #bce7d6;
+}
+
+#lifecycle:hover {
+    background-color: #a9e0cb;
+}
+
+#diseases {
+    background-color: #ceeee2;
+}
+
+#diseases:hover {
+    background-color: #bce7d6;
+}
+/*End of Mosquito Info*/
+
+/*Timeline*/
+.timeline {
+    border-collapse: collapse;
+    z-index: 2;
+    width: 45%;
+    float: left;
+    clear: both;
+    margin: 2vw;
+}
+
+#timelinetitle {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    font-size: 2vw;
+    padding-bottom: 0.3vw;
+}
+
+#timelinesubtitle {
+    padding-top: 0;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.left {
+    border-left: solid 0.2vw black;
+    text-align: left;
+    padding: 1vw;
+    font-family: 'Sigmar One', cursive;
+    font-size: 1.4vw;
+}
+
+.right {
+    text-align: left;
+    padding: 1vw;
+    font-size: 1.2vw;
+}
+/*End of Timeline*/
+
+/*Slideshow*/
+* {box-sizing:border-box}
+    
+#vectorbox {
+    background-image: url(Images/web.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 20vw;
+    opacity: 1;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+#vectorbackground {
+    background-color: #cae7c4;
+    opacity: 0.5;
+    display: inline-block;
+    width: 90%;
+    height: 85%;
+    vertical-align: middle;
+}
+    
+#vectortitle {
+    font-size: 3vw;
+    padding: 0;
+    transform: translateY(1vw);
+}
+
+#vectordefinition {
+    font-size: 1.3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    transform: translateY(-2vw);
+}
+    
+#zikabox {
+    background-image: url(Images/branches.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 20vw;
+    opacity: 1;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+    
+#zikabackground {
+    background-color: #c6ece8;
+    opacity: 0.5;
+    display: inline-block;
+    width: 90%;
+    height: 85%;
+    vertical-align: middle;
+}
+
+#zikatitle {
+    font-size: 3vw;
+}
+
+#zikadefinition {
+    font-size: 1.3vw;
+    transform: translateY(-4vw);
+    padding: 1.3vw;
+}
+
+#microbox {
+    background-image: url(Images/tree.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 20vw;
+    opacity: 1;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+#microbackground {
+    background-color: #cae7c4;
+    opacity: 0.55;
+    display: inline-block;
+    width: 90%;
+    height: 85%;
+    vertical-align: middle;
+}
+
+#microtitle {
+    font-size: 3vw;
+}
+
+#microdefinition {
+    font-size: 1.3vw;
+    transform: translateY(-4vw);
+    padding: 1.7vw;
+}
+
+#syndromebox {
+    background-image: url(Images/rocks.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 20vw;
+    opacity: 1;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+#syndromebackground {
+    background-color: #c6ece8;
+    opacity: 0.55;
+    display: inline-block;
+    width: 90%;
+    height: 85%;
+    vertical-align: middle;
+}
+
+#syndrometitle {
+    font-size: 3vw;
+    transform: translateY(1vw);
+}
+
+#syndromedefinition {
+    font-size: 1.3vw;
+    transform: translateY(-3vw);
+    padding: 1.7vw;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 40vw;
+    display: inline-block;
+    float: right;
+    margin-top: 5vw;
+    margin-right: 4.55vw;
+}
+
+#arrow {
+    width: 3vw;
+    display: inline-block;
+    padding: 0.5vw;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    margin-top: -12vw;
+    font-weight: bold;
+    transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  float: right;
+}
+
+.prev {
+    float: left;
+}
+
+/* On hover, button becomes see-through */
+.prev:hover, .next:hover {
+    opacity: 0.3;
+}
+
+/* The dots/bullets/indicators */
+#dots {
+    text-align: center;
+    padding-top: 0.5vw;
+}
+
+.dot {
+    cursor: pointer;
+    height: 0.6vw;
+    width: 0.6vw;
+    margin: 2px;
+    background-color: #ccf4ed;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center;
+    transition: 0.4s ease;
+}
+
+.active, .dot:hover {
+  background-color: #80e5d4;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .slprev, .slnext,.text {font-size: 11px}
+}
+
+.FAQcontainer {
+    width: 35%;
+    float: right;
+    margin: 2vw;
+    margin-right: 7vw;
+    font-size: 1.15vw;
+}
+
+#FAQtitle {
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: 'Sigmar One', cursive;
+    margin-bottom: 0.5vw;
+}
+
+summary::-webkit-details-marker {
+    color: #85d8a8;
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+
+summary:focus {
+	outline-style: none;
+}
+
+article > details > summary {
+	font-size: 1.8vw;
+	padding: .8vw;
+    border-top: 0.1vw solid black;
+}
+
+details > p {
+	margin-left: 1vw;
+}
+
+#courtesy {
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+#bottomnavbar{
+    transform: translateY(100vw);
+}

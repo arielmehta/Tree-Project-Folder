@@ -1,0 +1,91 @@
+body {
+    font-family: Abel, sans-serif;
+}
+
+* {box-sizing:border-box}
+
+#container {
+    position: absolute;
+    width: 50%;
+    height: 60vw;
+    margin-left: 25%;
+    margin-top: 5vw;
+    background-color: #c2ebe6;
+}
+
+#form {
+    text-align: center;
+    height:100%;
+    padding: 3vw;
+    font-size: 1.5vw;
+}
+
+#globe {
+    height: 7vw;
+    transform: translateY(16vw)translateX(-12vw);
+}
+
+#globe:hover {
+    opacity: 0.7;
+}
+
+#latlong {
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 4.3%;
+    background-image: url(Images/speech%20bubble.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table-cell;
+}
+
+#latlongtext {
+    width: 13vw;
+    height: 12vw;
+    font-size: 1.4vw;
+    padding: 1.3vw;
+    display: table-cell;
+}
+
+#warning {
+    width: 6vw;
+    float: right;
+    margin-right: 9%;
+    margin-top: 10%
+}
+
+#warningtext {
+    float: right;
+    clear: both;
+    margin-right: 3%;
+    width: 16%;
+    font-size: 1.4vw;
+}
+
+#nextbutton {
+    text-align: center;
+    background: #89d8cf;
+    margin-top: 3vw;
+    border: none;
+    padding: 0.5vw;
+}
+
+#nextbutton:hover {
+    opacity: 0.6;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#iconcredit {
+    margin: auto;
+    text-align: center;
+    font-size: 0.8vw;
+}
+

@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Pathway Gothic One');
+
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Abel, sans-serif !important;
+}
+
+
+.parallax { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 0.7;
+    /* Set a specific height */
+    height: 40vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallaxs { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 0.7;
+    /* Set a specific height */
+    height: 150vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    opacity: 0.7;
+    /* Set a specific height */
+    height: 10vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    font-family: Abel;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#years{
+    font-size:1.2vw;
+}
+
+#map {
+    width: 85%;
+    height: 60vw;
+    margin: auto;
+    margin-top: 0;
+}
+
+.title {
+    text-align: left;
+    font-size: 7vw;
+    color: white;
+    z-index: 2;
+    margin-top: 0;
+    position: absolute;
+    margin-left: 42vw;
+}
+
+#logo{
+    width: 15vw;
+    vertical-align: middle;
+    margin-top: 1vw;
+    margin-left: 20vw;
+    opacity: 0.85;
+    position: relative;
+    float: left;
+}
+#logobig{
+    width: 30vw;
+    height:30vw;
+    vertical-align: middle;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    opacity: 0.85;
+    position: relative;
+    float: center;
+}
+
+#titletext {
+    position: absolute;
+    background-color: black;
+    background-size: cover;
+    width: 100%;
+    height: 30vw;
+    font-weight: 900;
+    font-family: 'Abel', sans-serif;
+}
+
+#realtitletext {
+    vertical-align: middle;
+    width: 100%;
+    display: table-cell;
+    height: 30vw;
+}
+
+.subtitle {
+    width: 30%;
+    position: absolute;
+    margin-left: 42vw;
+    margin-top: 8.3vw;
+    text-align: left;
+    font-size: 1.3vw;
+    color: white;
+    z-index: 2;
+
+}
+
+#secondline {
+    position: absolute;
+    text-align: left;
+    margin-left: 42vw;
+    margin-top: 10vw;
+    font-size: 2.3vw;
+    color: white;
+    z-index: 2;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    font-family: Abel;
+}
+
+li a {
+    margin-top:0vw;
+    display: block;
+    font-size: 1.4vw;
+    color: white;
+    text-align: center;
+    padding: 1vw 3.5vw;
+    text-decoration: none;
+    text-decoration: bold;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.navigation{
+    margin-top: 0px;
+    font-family: 'Abel';
+}
+
+.pagetitles{
+    font-family: 'Abel';
+    text-align: left;
+    margin-top: 3vw; 
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 1vw;
+    font-size: 5vw;
+}
+
+#bottomnavbar{
+    margin-top: 0px;
+}
+
+img, div {
+    display: block;
+}
+
+#bigbox {
+    height: 30vw;
+    width: 100%;
+    opacity: 0.7;
+    position: relative;
+    top: 0;
+}
+
+#mission{
+    text-align: center;
+    color: white;
+    font-family: 'Abel';
+    width: 100%;
+}
+
+#missiontext {
+    width: 60%;
+    opacity: 1 ;
+    margin: auto;
+    color: white;
+    font-size: 2vw;
+}
+
+.text_box{
+    margin-top: 0vw;
+    padding: 1vw;
+    background-color: black;
+    opacity:0.8;
+}
+
+#buttonbox {
+    width: 100%;
+    text-align: center;
+}
+
+#indexbutton {
+    font-family: 'Abel', sans-serif;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: none;
+    color: black;
+    padding: 1vw;
+    opacity: 1;
+    background-color: #63cbc0;
+    text-align: center;
+    border-radius: 1vw;
+    width: 19%;
+    display: inline-block;
+    margin: 3vw;
+}
+
+#indexbutton:hover {
+    opacity: 0.6;
+}
+
+#video {
+    width: 70%;
+    opacity: 1;
+    height: 38vw;
+}
+
+#videobox {
+    margin: auto;
+    text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+
+#menuicon {
+    float: right;
+    padding: 1vw;
+    width: 5vw;
+    height: 5vw;
+    z-index: 5;
+}
+
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        #menuicon {
+            width: 11vw;
+            height: 11vw;
+        }
+        
+        #menu {
+            font-size: 6.3vw !important;
+            padding: 3vw !important;
+            width: 55vw !important;
+            background:rgba(1,1,1,0.7) !important;
+        }
+        
+        #menubox {
+            margin-top: 11vw !important;
+            width: 55vw !important;
+        }
+        
+        #menucontainer {
+            width: 55vw !important;
+        }
+}
+
+#menucontainer {
+    position: absolute;
+    text-align: right;
+    width: 13vw;
+    z-index: 5;
+    height: auto;
+    right: 0;
+}
+
+#menuicon:hover {
+    opacity: 0.5;
+}
+
+#menubox {
+    z-index: 4;
+    width: 13vw;;
+    margin-top: 5vw;
+    height: auto;
+}
+
+#menu {
+    background:rgba(1,1,1,0.5);
+    color: white;
+    padding: 0.8vw;
+    padding-right: 1.2vw;
+    margin: 0;
+    width: 13vw;
+    font-size: 1.2vw;
+    display: block;
+}
+
+#menu:hover {
+    background: rgba(1,1,1,0.7) !important;
+}
