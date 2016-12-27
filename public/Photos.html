@@ -2,18 +2,13 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <head>
-        <title>Photos</title>
-        <link rel="stylesheet" href="Photos.css">
-        <link rel="stylesheet" href="Project_Zika_Styles.css">
-        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-</head>
+  <head>
+      <title>Photos</title>
+      <link rel="stylesheet" href="Photos.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <body>
     <script type="text/javascript">
-        <!--
             function toggle_visibility(id) {
                var e = document.getElementById(id);
                if(e.style.display == 'block')
@@ -21,14 +16,13 @@
                else
                   e.style.display = 'block';
             }
-        //-->
-        </script>
+    </script>
         
 		<nav id="menucontainer">
-                <a href="#" onclick="toggle_visibility('menubox');">
-                    <img src="Images/menu.png" id="menuicon"/>
-                </a>
-            <div id="menubox" style="display: none">
+      <a href="#" onclick="toggle_visibility('menubox');">
+        <img src="Images/menu.png" id="menuicon"/>
+      </a>
+      <div id="menubox" style="display: none">
 				<a id="menu" href = "index.html"> Home </a>
 				<a id="menu" href = "login.html"> Enter New Data </a>
         <a id="menu" href = "full_map.html"> Map </a>
@@ -40,7 +34,7 @@
 				<a id="menu" href = "Photos.html"> Photos </a>
         <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
 				<a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
-            </div>
+      </div>
 		</nav>
         
     <div class="slideshow-container">
@@ -60,14 +54,15 @@
             <img src="Images/tree.jpg" id="slideshowpicture">
         </div>
     
-    <a class="prev" onclick="plusSlides(-1)">
-        <img src="Images/leftarrow.png" id="arrow"/>
-    </a>
-    <a class="next" onclick="plusSlides(1)">
-        <img src="Images/rightarrow.png" id="arrow"/>
-    </a>
-        </div>
-        <br>
+        <a class="prev" onclick="plusSlides(-1)">
+          <img src="Images/leftarrow.png" id="arrow"/>
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+          <img src="Images/rightarrow.png" id="arrow"/>
+        </a>
+    </div>
+
+  <br>
         
     <div id="dots">
       <span class="dot" onclick="currentSlide(1)"></span>
@@ -78,44 +73,35 @@
 
 <!--End of slideshow HTML--> 
 <!-- JavaScript for slideshow -->
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
     }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-}
-</script>
+    </script>
 <!-- End of JavaScript for slideshow -->
 
-<!--Bottom navigation bar -->
-<footer>
-    <div id = "bottomnavbar"; class= "navigation"> 
-        <ul class = "navbar">
-				<li><a href= ""> Contact us </a></li>
-				<li><a href = ""> WHS Biology Fb Page </a></li>
-        </ul>
-    </div>
-</footer>
-    </body>
+  </body>
 </html>

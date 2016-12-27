@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <link rel = "stylesheet" href= "Project_Zika_Styles.css">
+    <script type="text/javascript" src="mainfirebase.js"></script>
+
+    <title> Masonic Reforestation </title>
+  </head>
+
+<body>
+      <script type="text/javascript">
+          function toggle_visibility(id) {
+             var e = document.getElementById(id);
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+             else
+                e.style.display = 'block';
+          }
+      </script>
+      <nav id="menucontainer">
+        <a href="#" onclick="toggle_visibility('menubox');">
+            <img src="Images/menu.png" id="menuicon"/>
+        </a>
+        <div id="menubox" style="display: none">
+          <a id="menu" href = "index.html"> Home </a>
+          <a id="menu" href = "login.html"> Enter New Data </a>
+          <a id="menu" href = "full_map.html"> Map </a>
+          <a id="menu" href = "Procedures.html"> How to Set Up Traps </a>
+          <a id="menu" href = "DisplayData.html"> Active Traps List </a>
+          <a id="menu" href = "PostsandUpdates.html"> Posts and Updates </a>
+          <a id="menu" href = "DataAnalysis.html"> Data Analysis </a>
+          <a id="menu" href = "AboutUs.html"> About Us</a>
+          <a id="menu" href = "Photos.html"> Photos </a>
+          <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
+          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+        </div>
+      </nav>
+
+
+  <div class="parallax">
+          <div id="bigbox">
+          	<div id="titletext">
+              	<div id="realtitletext">
+              		<h1 class="title">Masonic Reforestation Project</h1>
+              		<h3 class="subtitle"> Math Science Nucleus </h3>
+              	</div>
+          	</div>
+          </div>
+          <div class = "text_box">
+      		<h2 id= "mission" class="pagetitles">Our Vision</h2>
+        			<p class = "missiontext"> Our East Bay Hills have lost much of their biodiversity through grazing livestock and large scale deforestation which has rid the landscape of much of its native oak forests, riparian habitats, bunchgrasses, wildflowers and shrubery. </p>
+        			<p class = "missiontext"> With this project, we aim to reforest 267 acres of the hills owned by the Masonic Retirement Home to utilize the 2 tons of food-waste produced by the home per week, increase habitats for native raptors, and other native wildlife incliding amphibians, mammals and reptiles, and also reduce the carbon footprint, while simultaneuosly educating the public and students about the environment.</p>
+        		<div id="buttonbox">
+            		<a id="indexbutton" href="AboutUs.html">Learn More</a>
+      		</div>
+  		</div>
+  </div>
+</body>
+</html>
