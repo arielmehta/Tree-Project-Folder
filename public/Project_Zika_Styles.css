@@ -23,6 +23,18 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.smallborderparallax { 
+    /* The image used */
+    background-image: url("Images/nicer.jpg");
+    /* Set a specific height */
+    height: 10vw; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 body {
     margin: 0;
     font-family: Abel;
@@ -62,6 +74,7 @@ body {
     position: absolute;
     background-color: white;
     background-size: cover;
+    font-size: 3vw;
     width: 100%;
     height: 10vw;
 }
@@ -70,9 +83,12 @@ body {
     display: table-cell;
     height: 2vw;
 }
-
+#maptext{
+    margin-top: 2.5vw;
+    margin-left: 6vw;
+}
 .subtitle {
-    width: 30%;
+    width: 50%;
     position: absolute;
     margin-left: 4vw;
     margin-top: 2vw;
@@ -264,4 +280,8 @@ img, div {
 
 #menu:hover {
     background: rgba(1,1,1,0.7) !important;
+}
+
+#aboutustitle{
+    margin-top: 0vw !important;
 }

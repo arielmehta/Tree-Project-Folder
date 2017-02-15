@@ -11,36 +11,8 @@ html {
 .parallax { 
     /* The image used */
     background-image: url("Images/nicer.jpg");
-    opacity: 0.7;
     /* Set a specific height */
     height: 60vw !important;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.parallaxf { 
-    /* The image used */
-    background-image: url("Images/nicer.jpg");
-    opacity: 0.7;
-    /* Set a specific height */
-    height: 80vw !important;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax2 { 
-    /* The image used */
-    background-image: url("Images/nicer.jpg");
-    opacity: 0.7;
-    /* Set a specific height */
-    height: 5vw !important; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

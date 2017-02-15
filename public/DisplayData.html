@@ -17,7 +17,6 @@
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
   <body>
             <script type="text/javascript">
@@ -32,61 +31,50 @@
         //-->
         </script>
         
-		<nav id="menucontainer">
-                <a href="#" onclick="toggle_visibility('menubox');">
-                    <img src="Images/menu.png" id="menuicon"/>
-                </a>
-            <div id="menubox" style="display: none">
-				<a id="menu" href = "index.html"> Home </a>
-				<a id="menu" href = "login.html"> Enter New Data </a>
-        <a id="menu" href = "full_map.html"> Map </a>
-        <a id="menu" href = "Procedures.html"> How to Set Up Traps </a>
-				<a id="menu" href = "DisplayData.html"> Active Traps List </a>
-				<a id="menu" href = "PostsandUpdates.html"> Posts and Updates </a>
-				<a id="menu" href = "DataAnalysis.html"> Data Analysis </a>
-				<a id="menu" href = "AboutUs.html"> About Us</a>
-				<a id="menu" href = "Photos.html"> Photos </a>
-        <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
-				<a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
-            </div>
-		</nav>
+      <nav id="menucontainer">
+        <a href="#" onclick="toggle_visibility('menubox');">
+            <img src="Images/menu.png" id="menuicon"/>
+        </a>
+        <div id="menubox" style="display: none">
+          <a id="menu" href = "index.html"> Home </a>
+          <a id="menu" href = "login.html"> Enter New Data </a>
+          <a id="menu" href = "full_map.html"> Map </a>
+          <a id="menu" href = "DisplayData.html"> Planted Trees </a>
+          <a id="menu" href = "AboutUs.html"> About Us</a>
+          <a id="menu" href = "Photos.html"> Photos </a>
+          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+        </div>
+      </nav>
     
-<!-- <h1 id = "subtitle" style = "font-family:Abel !important"> Active Traps List </h1>
-  <div id="data_table">
- -->
+<h1 id = "subtitle"> Planted Trees </h1>
+<div id="data_table">
+  <script>
+    var trap_number = 0;
+      var New_Trees = {};
 
-<!-- <script>
-var trap_number = 0;
-   var Trap_Setup_Form = {};
-
-   firebaseRefa.on('value', function(snapshot) {
-       Trap_Setup_Form = snapshot.val();
-       var session_data = "<div class=\"header-container\"> " +
-               "<div class=\"header-type\">Trap Number</div >" +
-               "<div class=\"header-date\">Initials</div>" +
-               "<div class=\"header-pos\">Latitude</div>" +
-               "<div class=\"header-lat\"> Longitude </div>" +
-               "<div class=\"header-weath\"> Start Date </div>" +
-           "</div>";
-
-
-       for (var keys in Trap_Setup_Form){
-          trap_number = trap_number + 1;
-           session_data = session_data + "<div class=\"session-container\">" +
-               "      <div id=\"type\" class=\"one\">" + trap_number + "</div>" +
-               "      <div id=\"date\" class=\"two\">" + Trap_Setup_Form[keys].Initials + " </div>" +
-               "      <div id=\"pos\" class=\"three\">"+Trap_Setup_Form[keys].Latitude +" </div>" +
-               "      <div id=\"lat\" class=\"four\"> " + Trap_Setup_Form[keys].Longitude + "</div>" +
-               "      <div id=\"date\" class=\"six\">" + Trap_Setup_Form[keys].Start_Month + "/" + Trap_Setup_Form[keys].Start_Day + "/" + Trap_Setup_Form[keys].Start_Year + " </div>" +
-                   "</div>";
-       }
-       document.getElementById("data_table").innerHTML = session_data;
-
-   });
-
-
-//</script> -->
-   </div>
+         firebaseRefa.on('value', function(snapshot) {
+             New_Trees = snapshot.val();
+             var session_data = "<div class=\"header-container\"> " +
+                     "<div class=\"header-type\">Trap Number</div >" +
+                     "<div class=\"header-date\">Initials</div>" +
+                     "<div class=\"header-pos\">Latitude</div>" +
+                     "<div class=\"header-lat\"> Longitude </div>" +
+                     "<div class=\"header-weath\"> Start Date </div>" +
+                 "</div>";
+              for (var keys in New_Trees){
+                trap_number = trap_number + 1;
+                session_data = session_data + "<div class=\"session-container\">" +
+                     "      <div id=\"type\" class=\"one\">" + trap_number + "</div>" +
+                     "      <div id=\"date\" class=\"two\">" + New_Trees[keys].Initials + " </div>" +
+                     "      <div id=\"pos\" class=\"three\">"+ New_Trees[keys].Latitude +" </div>" +
+                     "      <div id=\"lat\" class=\"four\"> " + New_Trees[keys].Longitude + "</div>" +
+                     "      <div id=\"date\" class=\"six\">" + New_Trees[keys].Start_Month + "/" + New_Trees[keys].Start_Day + "/" + New_Trees[keys].Start_Year + " </div>" +
+                         "</div>";
+              }
+          document.getElementById("data_table").innerHTML = session_data;
+         });
+  </script>
+</div>
 
 
 </body>

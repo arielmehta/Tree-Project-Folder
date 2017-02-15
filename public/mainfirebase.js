@@ -33,8 +33,8 @@ window.onload= function(){
 		var year = New_Trees[keys].Start_Year;
 		var initials = New_Trees[keys].Initials;
 		var label = initials.toString();
-		var title = "Trap Number: " + trap_number + '<div> </div>' + " Team Member: " + New_Trees[keys].Initials + '<div></div>';
-		var body = " Date Placed: " + month + "/" + day + "/" + year;
+		var title = "Tree Number: " + trap_number + '<div> </div>' + " Team Member: " + New_Trees[keys].Initials + '<div></div>';
+		var body = " Date Planted: " + month + "/" + day + "/" + year;
 		var contents = title + body;
 		// console.log(contents);
 		// console.log(position);

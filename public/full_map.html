@@ -24,32 +24,29 @@
             }
         </script>
         
-		<nav id="menucontainer">
-            <a href="#" onclick="toggle_visibility('menubox');">
-                <img src="Images/menu.png" id="menuicon"/>
-            </a>
-            <div id="menubox" style="display: none">
-				<a id="menu" href = "index.html"> Home </a>
-				<a id="menu" href = "login.html"> Enter New Data </a>
-                <a id="menu" href = "full_map.html"> Map </a>
-                <a id="menu" href = "Procedures.html"> How to Set Up Traps </a>
-				<a id="menu" href = "DisplayData.html"> Active Traps List </a>
-				<a id="menu" href = "PostsandUpdates.html"> Posts and Updates </a>
-				<a id="menu" href = "DataAnalysis.html"> Data Analysis </a>
-				<a id="menu" href = "AboutUs.html"> About Us</a>
-				<a id="menu" href = "Photos.html"> Photos </a>
-                <a id="menu" href = "https://www.mosquitoes.org/" target="_blank"> ACMAD Website </a>
-				<a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
-            </div>
-		</nav>
-        <div class = "parallax">
+<nav id="menucontainer">
+        <a href="#" onclick="toggle_visibility('menubox');">
+            <img src="Images/menu.png" id="menuicon"/>
+        </a>
+        <div id="menubox" style="display: none">
+          <a id="menu" href = "index.html"> Home </a>
+          <a id="menu" href = "login.html"> Enter New Data </a>
+          <a id="menu" href = "full_map.html"> Map </a>
+          <a id="menu" href = "DisplayData.html"> Planted Trees </a>
+          <a id="menu" href = "AboutUs.html"> About Us</a>
+          <a id="menu" href = "Photos.html"> Photos </a>
+          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+        </div>
+      </nav>
             <div id="bigbox">
                 <div id="titletext">
                     <div id="realtitletext">
-                        <h1> Tree Map </h1>
+                        <h1 id= "maptext"> Tree Map </h1>
                     </div>
                 </div>
             </div>
+            <div class= "smallborderparallax"></div>
+            <div class = "parallax">
             <div class= "mapback">
                 <div id='map'>
                     <script async defer
@@ -58,5 +55,6 @@
                 </div>
             </div>
         </div>
+         <div class = "parallax"></div>
 	</body>
 </html>
