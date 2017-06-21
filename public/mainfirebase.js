@@ -15,11 +15,11 @@ function initMap() {
 	    zoom: 13
 	});
 }
-window.onload= function(){
+window.onload = function () {
     firebase.initializeApp(config);
 };
 
-window.onload= function(){
+window.onload = function () {
 	for (var keys in New_Trees){
 		trap_number = trap_number + 1;
 		console.log(trap_number);
@@ -92,7 +92,6 @@ var New_Trees = {};
 firebaseRefa.on('value', function(snapshot){
 	New_Trees = snapshot.val();
 });
-
 
 
 

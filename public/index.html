@@ -8,55 +8,64 @@
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-    <link rel = "stylesheet" href= "Project_Zika_Styles.css">
+      
+    <link rel = "stylesheet" href= "styles.css">
     <script type="text/javascript" src="mainfirebase.js"></script>
 
     <title> Masonic Reforestation </title>
   </head>
 
 <body>
-      <script type="text/javascript">
-          function toggle_visibility(id) {
-             var e = document.getElementById(id);
-             if(e.style.display == 'block')
-                e.style.display = 'none';
-             else
-                e.style.display = 'block';
-          }
-      </script>
-      <nav id="menucontainer">
-        <a href="#" onclick="toggle_visibility('menubox');">
-            <img src="Images/menu.png" id="menuicon"/>
-        </a>
-        <div id="menubox" style="display: none">
+<!-- navigation -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" 
+        onclick="closeNav()">&times;</a>
           <a id="menu" href = "index.html"> Home </a>
-          <a id="menu" href = "login.html"> Enter New Data </a>
+          <a id="menu" href = "login.html"> Enter Data </a>
           <a id="menu" href = "full_map.html"> Map </a>
           <a id="menu" href = "DisplayData.html"> Planted Trees </a>
           <a id="menu" href = "AboutUs.html"> About Us</a>
           <a id="menu" href = "Photos.html"> Photos </a>
-          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> MS Nucleus </a>
         </div>
-      </nav>
 
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            };
 
-  <div class="parallax">
-          <div id="bigbox">
-          	<div id="titletext">
-              	<div id="realtitletext">
-              		<h1 class="title">Mission Hills Reforestation Project</h1>
-              		<h3 class="subtitle"> Math Science Nucleus ~ Tri-Ced Recycling ~ Masonic Home </h3>
-              	</div>
-          	</div>
-          </div>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                document.body.style.backgroundColor = "white";
+            };
+        </script>
+
+        <!-- end of nav -->
+    <div class="specialborderparallax">
+        <div id="main">
+            <span style="font-size: 3vw; cursor:pointer"onclick="openNav()"> &#9776;
+            </span>
+        </div>
+    </div>
+    <div class= "specialborderparallax"></div>
+    <div class= "smallborderparallax">
+        <h2 id= "maintitle">MASONIC HILLS REFORESTATION PROJECT</h2>
+        <h2 id= "subtitlesponsers">MATH SCIENCE NUCLEUS. MASONIC HOME. TRI CED RECYLING. </h2>
+        </div>
+    <div class="parallax">
           <div class = "text_box">
       		<h2 id= "mission" class="pagetitles">Our Vision</h2>
         			<p class = "missiontext"> Our East Bay Hills have lost much of their biodiversity through grazing livestock and large scale deforestation which has rid the landscape of much of its native oak forests, riparian habitats, bunchgrasses, wildflowers and shrubery. </p>
-        			<p class = "missiontext"> With this project, we aim to reforest 267 acres of the hills owned by the Masonic Retirement Home to utilize the 2 tons of food-waste produced by the home per week, increase habitats for native raptors, and other native wildlife incliding amphibians, mammals and reptiles, and also reduce the carbon footprint, while simultaneuosly educating the public and students about the environment.</p>
+        			<p class = "missiontext"> With this project, we aim to reforest 267 acres of the hills owned by the Masonic Retirement Home to utilize the 2 tons of food-waste produced by the home per week, increase habitats for native raptors, and other native wildlife including amphibians, mammals and reptiles, and also reduce the carbon footprint, while simultaneuosly educating the public and students about the environment.</p>
         		<div id="buttonbox">
-            		<a id="indexbutton" href="AboutUs.html">Learn More</a>
-      		</div>
+            		<a id="indexbutton" href="http://www.tricityvoice.com/articlefiledisplay.php?issue=2016-04-05&file=Woodlands+1274P+++TCV.txt" target="_blank">Learn More</a>
+      		    </div>
   		</div>
-  </div>
+        
+    </div>
+    <img src= "Images/masonic.jpg" style="width:100vw;height:29.56vw;">
 </body>
 </html>
