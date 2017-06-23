@@ -11,6 +11,7 @@ var uiConfig = {
     'signInSuccessUrl': 'EnterData2.html',
     'signInOptions': [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
 };
+
 window.onload= function(){
     firebase.initializeApp(config);
     firebaseInit(); 
@@ -24,19 +25,35 @@ function firebaseInit() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) { // User is signed in.
             user = user;
-            var postRef= firebaseRefa.push();// creating form submission id
-            postRef.set({                  //creating children data for each form submission
-            username: "bob",
-            email: "bomb.com",
-            profile_picture : "image"
+            console.log(user);
+            var user = firebase.auth().currentUser;
+            var name, email, photoUrl, uid, emailVerified;
+
+            if (user != null) {
+              name = user.displayName;
+              email = user.email;
+              photoUrl = user.photoURL;
+              emailVerified = user.emailVerified;
+              uid = user.uid;
+            }
+            console.log(name);
+            console.log(email);
+            console.log(photoUrl);
+
+            var postRef= firebaseRefb.push();// creating form submission id
+                postRef.set({     //creating children data for each form submission
+                    username: name,
+                    user: uid,
+                    email: email,
+                    profile_picture : photoUrl
                 }); 
+                console.log('done');
 
         var New_Trees = {};
 
         firebaseRefa.on('value', function(snapshot){
             New_Trees = snapshot.val();
-        });
-            console.log(user);               
+        });               
             user.getToken().then(function(accessToken) {
                 console.log('signed in');
 
@@ -49,18 +66,6 @@ function firebaseInit() {
         console.log(error);
     });
 };
-
-
-// function writeUserData(userId, name, email, imageUrl) {
-//   firebase.database().ref('users/' + userId).set({
-//     username: name,
-//     email: email,
-//     profile_picture : imageUrl
-//   });
-//   console.log('donewithfunction');
-//   console.log(username);
-// };
-
 
 function googleSignout() {
     // sign out 

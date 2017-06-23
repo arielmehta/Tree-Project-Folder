@@ -12,7 +12,7 @@ function initMap() {
 	var mapDiv = document.getElementById('map');
 	map = new google.maps.Map(mapDiv, {
 	    center: {lat: 37.601904, lng: -122.009949},
-	    zoom: 18,
+	    zoom: 15,
 	    scrollwheel:  false,
         mapTypeId: 'satellite',
         minZoom: 10, 
@@ -58,34 +58,31 @@ function initMap() {
 line.setMap(map);
 
     var site1 = [
-          {lat: 37.602698, lng: -122.01041},
-          {lat: 37.602588 , lng: -122.010027},
-          {lat: 37.602185 , lng:  -122.009209},
-          {lat: 37.602079 , lng:  -122.009001},
-          {lat:  37.601691 , lng: -122.008916},
-          {lat: 37.601512, lng: -122.00947},
+          {lat: 37.599714 , lng: -122.001801},
+          {lat: 37.600156  , lng: -122.000513},
+          {lat: 37.598184   , lng:  -121.992102},
+          {lat: 37.601448  , lng:  -121.992702},
+          {lat:  37.606276  , lng: -121.994977},
+          {lat: 37.607364, lng: -121.99841},
 
-          {lat: 37.601369, lng: -122.009448},
-          {lat: 37.6013, lng: -122.009956},
+          {lat: 37.60818, lng: -122.001028},
+          {lat: 37.606548, lng: -122.004204},
 
-          {lat: 37.601224, lng: -122.010087},
-          {lat: 37.601445, lng: -122.010178},
-          {lat: 37.601632, lng: -122.0103},
+          {lat: 37.60461, lng: -122.009182},
+          {lat:  37.606174, lng: -122.010178},
+          {lat: 37.606174 , lng: -122.011585},
 
-          {lat: 37.601909, lng: -122.010547},
-          {lat: 37.601828, lng: -122.010695},
-          {lat: 37.601957, lng: -122.010818},
+          {lat: 37.605188 , lng:  -122.013645},
+          {lat: 37.6041, lng: -122.015061},
+          {lat: 37.60274, lng: -122.013559},
 
-          {lat:  37.602215, lng: -122.010783},
-          {lat: 37.602251, lng: -122.010596},
-          {lat: 37.602615, lng: -122.010805},
-
-          {lat: 37.602698, lng: -122.01041}
+          {lat:  37.601584 , lng:  -122.014847},
+          {lat: 37.594206, lng: -122.006564}
         ];
 
         var site1 = new google.maps.Polygon({
         	paths: site1,
-        	fillColor: '#800000',
+        	fillColor: '#FFF',
         	fillOpacity: 0.35
 
         });
@@ -94,10 +91,7 @@ line.setMap(map);
 }
 
 window.onload = function () {
-    firebase.initializeApp(config);
-};
-
-window.onload = function () {
+	firebase.initializeApp(config);
 	for (var keys in New_Trees){
 		trap_number = trap_number + 1;
 		console.log(trap_number);
@@ -135,6 +129,8 @@ var yurt = "Images/yurt2.png";
 function addmarkers(positionval, title, content, label){
 	var marker = new google.maps.Marker({
 	  position: positionval,
+	  title:title,
+	  content: content,
 	  map: map,
 	  label: label,
 	  icon: iconimage
@@ -192,7 +188,6 @@ var New_Trees = {};
 firebaseRefa.on('value', function(snapshot){
 	New_Trees = snapshot.val();
 });
-
 
 
 

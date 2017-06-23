@@ -21,7 +21,7 @@
     <body>
         <div id="container">
             <div id="form">
-                <form class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
+                <form action="upload.php" method="post" enctype="multipart/form-data" class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
                     Username or initials (this will appear publicly):<br>
                         <input id= "initials" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
                         <br>
@@ -91,7 +91,9 @@
                     Longitude:<br>
                         <input id= "long" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude">
                         <br>
-                        <input id="nextbutton" style="font-family: Abel; font-weight: bold; font-size: 1.3vw" type="submit" value="Submit Basic Info and Continue" disabled= "disabled"/>
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="submit" id="nextbutton" style="font-family: Abel; font-weight: bold; font-size: 1.3vw" type="submit" value="Submit" disabled= "disabled"/>
                 </form>
                 <div id="latlong">
                     <div id="latlongtext">
