@@ -11,10 +11,88 @@ var map;
 function initMap() {
 	var mapDiv = document.getElementById('map');
 	map = new google.maps.Map(mapDiv, {
-	    center: {lat: 37.557419, lng: -121.989398},
-	    zoom: 13
+	    center: {lat: 37.601904, lng: -122.009949},
+	    zoom: 18,
+	    scrollwheel:  false,
+        mapTypeId: 'satellite',
+        minZoom: 10, 
+	    
 	});
+    var siteBoundaries = [
+          {lat: 37.602698, lng: -122.01041},
+          {lat: 37.602588 , lng: -122.010027},
+          {lat: 37.602185 , lng:  -122.009209},
+          {lat: 37.602079 , lng:  -122.009001},
+          {lat:  37.601691 , lng: -122.008916},
+          {lat: 37.601512, lng: -122.00947},
+
+          {lat: 37.601369, lng: -122.009448},
+          {lat: 37.6013, lng: -122.009956},
+
+          {lat: 37.601224, lng: -122.010087},
+          {lat: 37.601445, lng: -122.010178},
+          {lat: 37.601632, lng: -122.0103},
+
+          {lat: 37.601909, lng: -122.010547},
+          {lat: 37.601828, lng: -122.010695},
+          {lat: 37.601957, lng: -122.010818},
+
+          {lat:  37.602215, lng: -122.010783},
+          {lat: 37.602251, lng: -122.010596},
+          {lat: 37.602615, lng: -122.010805},
+
+          {lat: 37.602698, lng: -122.01041}
+        ];
+
+
+    var line = new google.maps.Polyline({
+        path: siteBoundaries,
+        visible: true,
+        strokeOpacity: 1.0,
+        strokeColor: '#FF4730', 
+        strokeWeight: 2,
+        geodesic: true,
+        strokeWeight: 6
+        
+    });
+line.setMap(map);
+
+    var site1 = [
+          {lat: 37.602698, lng: -122.01041},
+          {lat: 37.602588 , lng: -122.010027},
+          {lat: 37.602185 , lng:  -122.009209},
+          {lat: 37.602079 , lng:  -122.009001},
+          {lat:  37.601691 , lng: -122.008916},
+          {lat: 37.601512, lng: -122.00947},
+
+          {lat: 37.601369, lng: -122.009448},
+          {lat: 37.6013, lng: -122.009956},
+
+          {lat: 37.601224, lng: -122.010087},
+          {lat: 37.601445, lng: -122.010178},
+          {lat: 37.601632, lng: -122.0103},
+
+          {lat: 37.601909, lng: -122.010547},
+          {lat: 37.601828, lng: -122.010695},
+          {lat: 37.601957, lng: -122.010818},
+
+          {lat:  37.602215, lng: -122.010783},
+          {lat: 37.602251, lng: -122.010596},
+          {lat: 37.602615, lng: -122.010805},
+
+          {lat: 37.602698, lng: -122.01041}
+        ];
+
+        var site1 = new google.maps.Polygon({
+        	paths: site1,
+        	fillColor: '#800000',
+        	fillOpacity: 0.35
+
+        });
+        site1.setMap(map);
+
 }
+
 window.onload = function () {
     firebase.initializeApp(config);
 };
@@ -39,6 +117,8 @@ window.onload = function () {
 		// console.log(contents);
 		// console.log(position);
 		addmarkers(position, title, contents, label);
+		addyurt();
+		// add landmarks function here
 	};
 }
 
@@ -49,22 +129,42 @@ var firebaseRefa = new Firebase(urla); //set_up form
 
 
 //google maps api for map, function called onload
+var iconimage = "Images/oak2.png";
+var yurt = "Images/yurt2.png";
+
 function addmarkers(positionval, title, content, label){
 	var marker = new google.maps.Marker({
 	  position: positionval,
 	  map: map,
-	  title: title,
-	  label: label
+	  label: label,
+	  icon: iconimage
+
 });
+
 	var infowindow = new google.maps.InfoWindow({
 	  content: content
+
 	});
 	marker.addListener('click', function() {
 	  infowindow.open(map, marker);
 	});
 };
 
+function addyurt(){
+	var marker = new google.maps.Marker({
+	  position: {lat: 37.602188, lng: -122.009783},
+	  map: map,
+	  icon:yurt
+	});
 
+	var infowindow = new google.maps.InfoWindow({
+	  content: "Yurt"
+
+	});
+	marker.addListener('click', function() {
+	  infowindow.open(map, marker);
+	});
+};
 function writeStartUserData(){
 	console.log("writing data");
 	var initials = document.getElementById('initials').value;
