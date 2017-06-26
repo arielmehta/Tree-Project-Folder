@@ -20,14 +20,47 @@
     
     <body>
         <div id="container">
+            <h1 style= " font-size: 5vw; margin-left:3vw">Enter Data:</h1>
+                <div id="latlong">
+                    <div id="latlongtext">
+                        <p>Find your latitude and longitude here.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <a href="http://mynasadata.larc.nasa.gov/latitudelongitude-finder/" target="_blank">
+                        <img id="globe" src="Images/globe.png"/>
+                    </a>
+                </div>
             <div id="form">
-                <form action="upload.php" method="post" enctype="multipart/form-data" class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
-                    Username or initials (this will appear publicly):<br>
+                <!--action="upload.php" method="post" goes inside form div-->
+                <form   enctype="multipart/form-data" class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
+                    Your Name:<br>
                         <input id= "initials" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
                         <br>
-                    Your Full Name:<br>
+                    Tree Species:<br>
+                        <select id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Coast Live Oak">Coast Live Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Valley Oak">Valley Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Black Oak">Black Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Blue Oak">Blue Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Black Walnut">Black Walnut</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Big-leave Maple">Big-Leave Maple</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="California Bay Laurel">California Bay Laurel</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Western Sycamore">Western Sycamore</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Fremont Cottonwood">Fremont Cottonwood</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Red Bud">Red Bud</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Blue Elderberry">Blue Elderberry</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Hollyleaf Cherry">Hollyleaf Cherry</option>       
+                    </select>
+                        <br>
+                    Diameter of Trunk:<br>
                         <input id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
                         <br>
+                    Height of Tree:<br>
+                        <input id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                        <br>
+
                     Date:<br>
                         <select id = "datemonth" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw;margin-bottom: 1vw" name="Month">
                             <option style="font-family: Abel; font-size: 1.2vw" value="01">January</option>
@@ -91,20 +124,19 @@
                     Longitude:<br>
                         <input id= "long" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude">
                         <br>
+                    <br>
+
                         Select image to upload:
+                    <br>
                         <input type="file" name="fileToUpload" id="fileToUpload">
-                        <input type="submit" value="Upload Image" name="submit" id="nextbutton" style="font-family: Abel; font-weight: bold; font-size: 1.3vw" type="submit" value="Submit" disabled= "disabled"/>
+                    <br>
+                    <br>
+                    <br>
+                    Additional Comments (i.e tree condition)<br>
+                    <textarea id= "long" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude"></textarea>
+                        <br>
+                        <input type="submit" value="Upload Image & Submit" name="submit" id="nextbutton" style="font-family: Abel; font-weight: bold; font-size: 1.3vw" type="submit" value="Submit" disabled= "disabled"/>
                 </form>
-                <div id="latlong">
-                    <div id="latlongtext">
-                        <p>Find your latitude and longitude here.</p>
-                    </div>
-                </div>
-                <div>
-                    <a href="http://mynasadata.larc.nasa.gov/latitudelongitude-finder/" target="_blank">
-                        <img id="globe" src="Images/globe.png"/>
-                    </a>
-                </div>
             </div>
         </div>
 <script>

@@ -40,20 +40,20 @@ function firebaseInit() {
             console.log(email);
             console.log(photoUrl);
 
-            var postRef= firebaseRefb.push();// creating form submission id
-                postRef.set({     //creating children data for each form submission
-                    username: name,
-                    user: uid,
-                    email: email,
-                    profile_picture : photoUrl
-                }); 
-                console.log('done');
+        //     var postRef= firebaseRefb.push();// creating form submission id
+        //         postRef.set({     //creating children data for each form submission
+        //             username: name,
+        //             user: uid,
+        //             email: email,
+        //             profile_picture : photoUrl
+        //         }); 
+        //         console.log('done');
 
-        var New_Trees = {};
+        // var New_Trees = {};
 
-        firebaseRefa.on('value', function(snapshot){
-            New_Trees = snapshot.val();
-        });               
+        // firebaseRefa.on('value', function(snapshot){
+        //     New_Trees = snapshot.val();
+        // });               
             user.getToken().then(function(accessToken) {
                 console.log('signed in');
 

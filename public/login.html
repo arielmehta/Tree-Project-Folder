@@ -1,7 +1,7 @@
 <! DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Firebase links -->
 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 
@@ -22,34 +22,44 @@
 <link rel = "stylesheet" href= "login.css">
 </head>
 	<body>
-    <script type="text/javascript">
-        function toggle_visibility(id) {
-           var e = document.getElementById(id);
-           if(e.style.display == 'block')
-              e.style.display = 'none';
-           else
-              e.style.display = 'block';
-        }
-    </script>
-        
-<nav id="menucontainer">
-        <a href="#" onclick="toggle_visibility('menubox');">
-            <img src="Images/menu.png" id="menuicon"/>
-        </a>
-        <div id="menubox" style="display: none">
+ <!-- navigation -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" 
+        onclick="closeNav()">&times;</a>
           <a id="menu" href = "index.html"> Home </a>
-          <a id="menu" href = "login.html"> Enter New Data </a>
+          <a id="menu" href = "login.html"> Enter Data </a>
           <a id="menu" href = "full_map.html"> Map </a>
           <a id="menu" href = "DisplayData.html"> Planted Trees </a>
           <a id="menu" href = "AboutUs.html"> About Us</a>
-          <a id="menu" href = "Photos.html"> Photos </a>
-          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> Math Science Nucleus </a>
+          <a id="menu" href = "Photos.html"> Brochure </a>
+          <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> MS Nucleus </a>
         </div>
-      </nav>
 
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            };
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                document.body.style.backgroundColor = "white";
+            };
+        </script>
+
+        
+    
+        <div id="main">
+            <span style="font-size: 3vw; cursor:pointer"onclick="openNav()"> &#9776;
+            </span>
+        </div>
+ 
+    <!-- end of nav -->
     <h1> Log In To Enter Data</h1>
 
     <div id="firebaseui-auth-container"></div>
-    <button onclick = "googleSignout()" >Sign out</button>
+<!--    <button style= "float:center;"onclick = "googleSignout()" >Sign out</button>-->
   </body>
         

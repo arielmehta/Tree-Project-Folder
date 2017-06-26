@@ -80,7 +80,7 @@ span{
 /*background parallax effect styling*/
 .parallax { 
     /* The image used */
-    background-image: url("Images/nicer1.jpg");
+    background-image: url("Images/nicer.jpg");
     /* Set a specific height */
     height: 40vw; 
 
@@ -92,7 +92,7 @@ span{
 }
 .smallborderparallax { 
     /* The image used */
-    background-image: url("Images/nicer1.jpg");
+    background-image: url("Images/nicer.jpg");
     /* Set a specific height */
     height: 35vw; 
 
@@ -105,7 +105,7 @@ span{
 
 .specialborderparallax { 
     /* The image used */
-    background-image: url("Images/nicer1.jpg");
+    background-image: url("Images/nicer.jpg");
     /* Set a specific height */
     height: 5vw; 
 
@@ -225,3 +225,20 @@ img, div {
     float: right;
 }
 
+#mapkeybox{
+    background-color: darkseagreen;
+    width:40%;
+    margin-left:5%;
+    margin-bottom: 10%;
+    padding-left: 2vw;
+    padding-bottom:1vw;
+    
+}
+#keytitle{
+    text-align: center;
+    font-size: 5vw;
+}
+
+#keytext{
+    font-size: 2vw;
+}

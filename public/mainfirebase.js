@@ -11,11 +11,11 @@ var map;
 function initMap() {
 	var mapDiv = document.getElementById('map');
 	map = new google.maps.Map(mapDiv, {
-	    center: {lat: 37.601904, lng: -122.009949},
+	    center: {lat: 37.603055, lng: -122.002771},
 	    zoom: 15,
 	    scrollwheel:  false,
         mapTypeId: 'satellite',
-        minZoom: 10, 
+        minZoom: 15, 
 	    
 	});
     var siteBoundaries = [
@@ -48,7 +48,7 @@ function initMap() {
     var line = new google.maps.Polyline({
         path: siteBoundaries,
         visible: true,
-        strokeOpacity: 1.0,
+        strokeOpacity: 0.6,
         strokeColor: '#FF4730', 
         strokeWeight: 2,
         geodesic: true,
@@ -56,34 +56,42 @@ function initMap() {
         
     });
 line.setMap(map);
+    
+    var outerBoundaries = [
+        {lat: 37.681647 , lng: -122.173462},
+        {lat: 37.450877 , lng: -122.136383},
+        {lat: 37.438884 , lng:  -121.808167},
+        {lat: 37.676212 , lng:-121.90567}
+        
+    ];
 
     var site1 = [
-          {lat: 37.599714 , lng: -122.001801},
-          {lat: 37.600156  , lng: -122.000513},
-          {lat: 37.598184   , lng:  -121.992102},
-          {lat: 37.601448  , lng:  -121.992702},
-          {lat:  37.606276  , lng: -121.994977},
-          {lat: 37.607364, lng: -121.99841},
-
-          {lat: 37.60818, lng: -122.001028},
-          {lat: 37.606548, lng: -122.004204},
-
-          {lat: 37.60461, lng: -122.009182},
-          {lat:  37.606174, lng: -122.010178},
-          {lat: 37.606174 , lng: -122.011585},
-
-          {lat: 37.605188 , lng:  -122.013645},
-          {lat: 37.6041, lng: -122.015061},
-          {lat: 37.60274, lng: -122.013559},
-
-          {lat:  37.601584 , lng:  -122.014847},
-          {lat: 37.594206, lng: -122.006564}
+        {lat: 37.594206, lng: -122.006564},
+        {lat:  37.601584 , lng:  -122.014847},
+        {lat: 37.60274, lng: -122.013559},
+        {lat: 37.6041, lng: -122.015061},
+        {lat: 37.605188 , lng:  -122.013645},
+        {lat: 37.606174 , lng: -122.011585},
+        {lat:  37.606174, lng: -122.010178},
+        {lat: 37.60461, lng: -122.009182},
+        {lat: 37.606548, lng: -122.004204},
+        {lat: 37.60818, lng: -122.001028},
+        {lat: 37.607364, lng: -121.99841},
+        {lat:  37.606276  , lng: -121.994977},
+        {lat: 37.601448  , lng:  -121.992702},
+        {lat: 37.598184   , lng:  -121.992102},
+        {lat: 37.600156  , lng: -122.000513},
+        {lat: 37.599714 , lng: -122.001801}
+        
         ];
 
         var site1 = new google.maps.Polygon({
-        	paths: site1,
-        	fillColor: '#FFF',
-        	fillOpacity: 0.35
+        	paths: [outerBoundaries, site1],
+              strokeColor: '#000000',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#ffffff',
+              fillOpacity: 0.35
 
         });
         site1.setMap(map);
