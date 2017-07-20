@@ -11,16 +11,16 @@ var map;
 function initMap() {
 	var mapDiv = document.getElementById('map');
 	map = new google.maps.Map(mapDiv, {
-	    center: {lat: 37.603055, lng: -122.002771},
-	    zoom: 15,
+	    center: {lat: 37.601993, lng: -122.009804},
+	    zoom: 18,
 	    scrollwheel:  false,
         mapTypeId: 'satellite',
-        minZoom: 15, 
+        minZoom: 13
 	    
 	});
     var siteBoundaries = [
           {lat: 37.602698, lng: -122.01041},
-          {lat: 37.602588 , lng: -122.010027},
+          {lat: 37.602588, lng: -122.010027},
           {lat: 37.602185 , lng:  -122.009209},
           {lat: 37.602079 , lng:  -122.009001},
           {lat:  37.601691 , lng: -122.008916},
@@ -113,12 +113,21 @@ window.onload = function () {
 		var year = New_Trees[keys].Start_Year;
 		var initials = New_Trees[keys].Initials;
 		var label = initials.toString();
-		var title = "Tree Number: " + trap_number + '<div> </div>' + " Team Member: " + New_Trees[keys].Initials + '<div></div>';
-		var body = " Date Planted: " + month + "/" + day + "/" + year;
-		var contents = title + body;
+		var adcom = New_Trees[keys].Additional_comments;
+		var species = New_Trees[keys].Species;
+			var iconm = species;
+		var diameter = New_Trees[keys].Diameter;
+		var height = New_Trees[keys].Height;
+		var Adcom = "Tree Species: "+ species +'<div> </div>'
+		+"Tree Diameter: "+ diameter + " cm"+'<div> </div>'
+		+"Tree Height: "+ height +" m"+ '<div> </div>'
+		+ "Comments: " + adcom;
+		var title = "Tree Number: " + trap_number + '<div> </div>' + " Planted By: " + New_Trees[keys].Initials + '<div></div>';
+		var body = " Date Planted: " + month + "/" + day + "/" + year+ '<div> </div>';
+		var contents = title + body + '<div> </div>' + Adcom + '<div> </div>';
 		// console.log(contents);
 		// console.log(position);
-		addmarkers(position, title, contents, label);
+		addmarkers(position, title, contents, iconm);
 		addyurt();
 		// add landmarks function here
 	};
@@ -131,17 +140,33 @@ var firebaseRefa = new Firebase(urla); //set_up form
 
 
 //google maps api for map, function called onload
-var iconimage = "Images/oak2.png";
 var yurt = "Images/yurt2.png";
 
-function addmarkers(positionval, title, content, label){
+	// var CoastLiveOak= "Images/CoastLiveOak.png";
+	// var ValleyOak= "Images/ValleyOak.png";
+	// var BlueOak = "Images/BlueOak.png";
+	// var BlackOak = "Images/BlackOak.png"; 
+	// var BlackWalnut= "Images/BlackWalnut.png";
+	// var BigLeafMaple= "Images/BigLeafMaple.png";
+	// var CaliforniaBayLaurel = "Images/CaliforniaBayLaurel.png";
+	// var WesternSycamore= "Images/WesternSycamore.png"; 
+	// var FremontCottonwood= "Images/FremontCottonwood.png";
+	// var RedBud= "Images/RedBud.png";
+	// var BlueElderberry= "Images/BlueElderberry.png";
+	// var HollyleafCherry= "Images/HollyleafCherry.png";
+	// var Other= "Images/Other.png";
+
+
+var iconbase = 'Images/';
+
+
+function addmarkers(positionval, title, content, iconm){	
 	var marker = new google.maps.Marker({
 	  position: positionval,
 	  title:title,
 	  content: content,
 	  map: map,
-	  label: label,
-	  icon: iconimage
+	  icon: iconbase + iconm + '.png'
 
 });
 
@@ -172,22 +197,28 @@ function addyurt(){
 function writeStartUserData(){
 	console.log("writing data");
 	var initials = document.getElementById('initials').value;
-	var name = document.getElementById('name').value;
+	var species = document.getElementById('species').value;
+	var diameter = document.getElementById('diameter').value;
+	var height = document.getElementById('height').value;
 	var start_date_month = document.getElementById('datemonth').value;
 	var start_date_day = document.getElementById('dateday').value;
 	var start_date_year = document.getElementById('dateyear').value;
 	var latitude = document.getElementById('lat').value;
 	var longitude = document.getElementById('long').value;
+	var adcom = document.getElementById('adcom').value;
 
 	var postRef= firebaseRefa.push();// creating form submission id
 	postRef.set({                  //creating children data for each form submission
 		Initials: initials,
-		Full_Name: name,
+		Species: species,
+		Diameter: diameter,
+		Height: height,
 		Start_Month: start_date_month,  
 		Start_Day: start_date_day, 
 		Start_Year: start_date_year,
 		Latitude: latitude,
-		Longitude: longitude  
+		Longitude: longitude,
+		Additional_comments: adcom
 		}); 
 }
 
@@ -196,10 +227,6 @@ var New_Trees = {};
 firebaseRefa.on('value', function(snapshot){
 	New_Trees = snapshot.val();
 });
-
-
-
-
 
 
 

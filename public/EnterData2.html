@@ -33,32 +33,32 @@
                     </a>
                 </div>
             <div id="form">
-                <!--action="upload.php" method="post" goes inside form div-->
                 <form   enctype="multipart/form-data" class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
                     Your Name:<br>
                         <input id= "initials" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
                         <br>
                     Tree Species:<br>
-                        <select id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Coast Live Oak">Coast Live Oak</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Valley Oak">Valley Oak</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Black Oak">Black Oak</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Blue Oak">Blue Oak</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Black Walnut">Black Walnut</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Big-leave Maple">Big-Leave Maple</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="California Bay Laurel">California Bay Laurel</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Western Sycamore">Western Sycamore</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Fremont Cottonwood">Fremont Cottonwood</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Red Bud">Red Bud</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Blue Elderberry">Blue Elderberry</option>
-                            <option style="font-family: Abel; font-size: 1.2vw" value="Hollyleaf Cherry">Hollyleaf Cherry</option>       
+                        <select id= "species" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="CoastLiveOak">Coast Live Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="ValleyOak">Valley Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlackOak">Black Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlueOak">Blue Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlackWalnut">Black Walnut</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BigLeafMaple">Big-Leave Maple</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="CaliforniaBayLaurel">California Bay Laurel</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="WesternSycamore">Western Sycamore</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="FremontCottonwood">Fremont Cottonwood</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="RedBud">Red Bud</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlueElderberry">Blue Elderberry</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="HollyleafCherry">Hollyleaf Cherry</option> 
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Other">Other (Specify species in comments section)</option> 
                     </select>
                         <br>
-                    Diameter of Trunk:<br>
-                        <input id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                    Diameter of Trunk: (cm)<br>
+                        <input id= "diameter" type = "number" value= "0" step = "0.01" min= "0" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw; height: 2vw; width: 4vw" type="text" name="Initials">
                         <br>
-                    Height of Tree:<br>
-                        <input id= "name" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                    Height of Tree: (m)<br>
+                        <input id= "height" type = "number" value= "0" min= "0" step = "0.01" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw; height: 2vw; width: 4vw" type="text" name="Initials">
                         <br>
 
                     Date:<br>
@@ -119,23 +119,21 @@
                         </select>
                         <br>
                     Latitude:<br>
-                        <input id = "lat" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Latitude">
+                        <input id = "lat" type = "number" min= "37.000000" value= "37.000000" step= "0.000001" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Latitude">
                         <br>
                     Longitude:<br>
-                        <input id= "long" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude">
-                        <br>
-                    <br>
-
-                        Select image to upload:
-                    <br>
-                        <input type="file" name="fileToUpload" id="fileToUpload">
-                    <br>
-                    <br>
+                        <input id= "long" type = "number" min= "-123.000000" value= "-122.000000" step= "0.000001" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude">
                     <br>
                     Additional Comments (i.e tree condition)<br>
-                    <textarea id= "long" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude"></textarea>
+                    <textarea id= "adcom" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude"></textarea>
                         <br>
-                        <input type="submit" value="Upload Image & Submit" name="submit" id="nextbutton" style="font-family: Abel; font-weight: bold; font-size: 1.3vw" type="submit" value="Submit" disabled= "disabled"/>
+
+                        <a href="https://script.google.com/macros/s/AKfycbwKW-_TMp-G0SyfufeDh1i3mJQYMQpUzrYi-7JuvcuA9ExBjOxs/exec" target="_blank">Click Here to Sumbit Tree Photo</a>
+                        <br>
+
+
+
+                        <input type="submit" value="Submit" name="submit" id="nextbutton" style=" width: 10vw; height: 5vw; font-family: Abel; font-weight: bold; font-size: 2.5vw" type="submit" value="Submit" disabled= "disabled"/>
                 </form>
             </div>
         </div>

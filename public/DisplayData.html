@@ -27,7 +27,7 @@
           <a id="menu" href = "login.html"> Enter Data </a>
           <a id="menu" href = "full_map.html"> Map </a>
           <a id="menu" href = "DisplayData.html"> Planted Trees </a>
-          <a id="menu" href = "AboutUs.html"> About Us</a>
+          <a id="menu" href = "https://www.msnucleus.org/Masonic/index_masonic1.html" target= "_blank"> About Us</a>
           <a id="menu" href = "Photos.html"> Brochure </a>
           <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> MS Nucleus </a>
         </div>
@@ -54,35 +54,41 @@
         </div>
  
     <!-- end of nav -->
-    
 <h1 id = "subtitle"> Planted Trees </h1>
 <div id="data_table">
+
+
   <script>
     var trap_number = 0;
+    var txt= "Click to Open Tree Album";
+    var link = txt.link("https://drive.google.com/open?id=0B_hlgXulRuyNRGNkNXZtbTVScXc");
       var New_Trees = {};
 
          firebaseRefa.on('value', function(snapshot) {
              New_Trees = snapshot.val();
              var session_data = "<div class=\"header-container\"> " +
-                     "<div class=\"header-type\">Tree Number</div >" +
-                     "<div class=\"header-date\">Planter</div>" +
-                     "<div class=\"header-pos\">Latitude</div>" +
-                     "<div class=\"header-lat\"> Longitude </div>" +
+                     "<div class=\"header-type\">Tree #</div >" +
+                     "<div class=\"header-date\">Tree Species & Volunteer </div>" +
+                     "<div class=\"header-pos\">Coordinates (lat, long)</div>" +
+                     "<div class=\"header-lat\"> Details </div>" +
                      "<div class=\"header-weath\"> Date Planted</div>" +
+                     "<div class=\"header-last\">Tree Photos </div>" +
                  "</div>";
               for (var keys in New_Trees){
                 trap_number = trap_number + 1;
                 session_data = session_data + "<div class=\"session-container\">" +
                      "      <div id=\"type\" class=\"one\">" + trap_number + "</div>" +
-                     "      <div id=\"date\" class=\"two\">" + New_Trees[keys].Initials + " </div>" +
-                     "      <div id=\"pos\" class=\"three\">"+ New_Trees[keys].Latitude +" </div>" +
-                     "      <div id=\"lat\" class=\"four\"> " + New_Trees[keys].Longitude + "</div>" +
-                     "      <div id=\"date\" class=\"six\">" + New_Trees[keys].Start_Month + "/" + New_Trees[keys].Start_Day + "/" + New_Trees[keys].Start_Year + " </div>" +
+                     "      <div id=\"date\" class=\"two\">" + New_Trees[keys].Species + "<div></div>" + "Planted By:" + "<div></div>"+ New_Trees[keys].Initials + " </div>" +
+                     "      <div id=\"pos\" class=\"three\">"+ New_Trees[keys].Latitude +"," + "<div></div>" + New_Trees[keys].Longitude + " </div>" +
+                     "      <div id=\"lat\" class=\"four\"> " + "Diameter: " + New_Trees[keys].Diameter + "<div></div>" + "Height: " + New_Trees[keys].Height + "<div></div>" + "Comments: " + New_Trees[keys].Additional_comments + "</div>" +
+                     "      <div id=\"date\" class=\"five\">" + New_Trees[keys].Start_Month + "/" + New_Trees[keys].Start_Day + "/" + New_Trees[keys].Start_Year + " </div>" +
+                    "      <div id=\"type\" class=\"six\">" + link +"<div></div>"+"<div> <br> </div>"+ " Folder Name: "+ New_Trees[keys].Species + ", " + New_Trees[keys].Initials + ", " + "(" + New_Trees[keys].Latitude +"," + New_Trees[keys].Longitude + ")" + "</div>" +
                          "</div>";
               }
           document.getElementById("data_table").innerHTML = session_data;
          });
   </script>
+  
 </div>
 
 

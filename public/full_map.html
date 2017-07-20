@@ -24,8 +24,8 @@
           <a id="menu" href = "login.html"> Enter Data </a>
           <a id="menu" href = "full_map.html"> Map </a>
           <a id="menu" href = "DisplayData.html"> Planted Trees </a>
-          <a id="menu" href = "AboutUs.html"> About Us</a>
-          <a id="menu" href = "Photos.html"> Photos </a>
+          <a id="menu" href = "https://www.msnucleus.org/Masonic/index_masonic1.html" target= "_blank"> About Us</a>
+          <a id="menu" href = "Photos.html"> Brochure </a>
           <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> MS Nucleus </a>
         </div>
 
@@ -50,33 +50,76 @@
         </div>
         <h2 id = "mappagetitle">Our Trees </h2>
     <div id= "mappageintrotextbox">
-        <p id= "mappageintrotext">Below is the site for the project, located behind the Masonic Home for the elderly, and next to the Garin Regional Wilderness. The green tree icons show the locations of living trees while the brown ones represent trees that have died. Using the data on this map of tree health, and data collected from the area, we hope to find areas most conducive to tree growth which will allow us to better learn where reforestation attempts will be most succesful. View the Key below the map to find descriptions/explanations of the different colored areas on the map. </p>
-        <img id= "youngtree" src= "Images/Webp.net-resizeimage%20(1).jpg"/>
+        <p id= "mappageintrotext">Below is the site for the project, located behind the Masonic Home for the elderly, and next to the Garin Regional Wilderness. The different colored icons show the locations of living trees by tree species. Using the data on this map, and data collected from the area, we hope to find areas most conducive to tree growth which will allow us to better learn where reforestation attempts will be most succesful. View the Key below for the different species of trees represented on the map. Click on the colored icons to view more details. </p>
+    <h2 style = "font-size: 2vw; margin-left: 10vw; display: inline-block;">Volunteer?</h2>
+    <a href = "login.html" style = "margin: 0vw; font-size: 1.5vw; display: inline-block;">Enter New Tree Data</a>
     </div>
         
-            <div class= "mapback">
-                <div id='map'>
-                    <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbeiNJqu5203t5wbT7ZBMJlZ_uJmAGwdg&callback=initMap">
-                    </script>
-                </div>
-            </div>
+    <div class= "mapback">
+
+        <div id='map'>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbeiNJqu5203t5wbT7ZBMJlZ_uJmAGwdg&callback=initMap">
+            </script>
+        </div>
+    </div>
     <div id= "mapkeybox">
-        <h1 id="keytitle">Key</h1>
-        <p id="keytext">
-            <strong>Black Line</strong>- 267 Acre Plot
+            <h1 id="keytitle">Key</h1>
+            <p id="keytext">
+            <div class="keyline"></div>
+            <p style= "margin:0vw; font-size: 2vw; text-align: center"> TREE SPECIES </p>
+            <div class = "keyline"></div>
+
+    <div id= "keyspeciesicons">
+      <img class = "icon" src= "Images/CoastLiveOak.png"><br>
+      <img class = "icon" src= "Images/ValleyOak.png"><br>           
+      <img class = "icon" src= "Images/BlueOak.png"><br>
+      <img class = "icon" src= "Images/BlackOak.png"><br>  
+      <img class = "icon" src= "Images/BlackWalnut.png"><br>
+      <img class = "icon" src= "Images/BigLeafMaple.png"><br>
+      <img class = "icon" src= "Images/CaliforniaBayLaurel.png"><br> 
+      <img class = "icon" src= "Images/WesternSycamore.png"><br> 
+      <img class = "icon" src= "Images/FremontCottonwood.png"><br> 
+      <img class = "icon" src= "Images/RedBud.png"><br> 
+      <img class = "icon" src= "Images/BlueElderberry.png"><br>
+      <img class = "icon" src= "Images/HollyleafCherry.png"><br>
+      <img class = "icon" src= "Images/Other.png">
+      </div>
+
+      <div id= "keyspecies">
+
+            <p class = "speciestext"> = Coast Live Oak</p>
             <br>
+            <p class = "speciestext"> = Valley Oak </p>
             <br>
-            <strong>Red Line</strong>- Current Reforestation Site/ Site
-            #1
+            <p class = "speciestext"> = Blue Oak </p>
             <br>
+            <p class = "speciestext"> = Black Oak </p>
+           <br>
+            <p class = "speciestext"> = Black Walnut </p>
             <br>
-            <strong>Dotted Lines</strong>- Rocky Area
+            <p class = "speciestext"> = Big Leaf Maple</p>
             <br>
+            <p class = "speciestext"> =  California Bay Laurel</p>
             <br>
-            <strong>Green Lines</strong>- Successful Area
-        </p>
-        
+            <p class = "speciestext"> = Western Sycamore</p>
+            <br>
+            <p class = "speciestext"> = Fremont Cottonwood</p>
+            <br>
+            <p class = "speciestext"> = Red Bud </p>
+            <br>
+            <p class = "speciestext"> = Blue Elderberry</p>
+            <br>
+            <p class = "speciestext"> = Holly Leaf Cherry</p>
+            <br>
+            <p class = "speciestext"> = Other </p>
+
+            </div>
+            
+            
+           <!--  <div class = "keyline"></div>
+            <br>
+            <div class = "keyline"></div> -->
     </div>
 	</body>
 </html>

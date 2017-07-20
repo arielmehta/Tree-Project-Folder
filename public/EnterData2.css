@@ -24,8 +24,9 @@ body {
 }
 
 #globe {
-    height: 7vw;
+    height: 15vw;
     float:right;
+    margin-top: 10vw;
     margin-right:4.5vw;
 }
 
@@ -35,7 +36,7 @@ body {
 
 #latlong {
     position: absolute;
-    margin-top: -22%;
+    margin-top: -4%;
     margin-left: 70%;
     background-image: url(Images/speech%20bubble.png);
     background-size: cover;
@@ -68,7 +69,7 @@ body {
 
 #nextbutton {
     text-align: center;
-    background: #89d8cf;
+    background: white;
     margin-top: 3vw;
     border: none;
     padding: 0.5vw;
@@ -84,7 +85,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 #iconcredit {
@@ -93,3 +94,14 @@ a:hover {
     font-size: 0.8vw;
 }
 
+textarea{
+    height:10vw;
+    width:40vw;
+}
+
+a{
+    color: black;
+    font-size: 2vw;
+    font-style: italic;
+
+}
