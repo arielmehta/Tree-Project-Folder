@@ -56,6 +56,380 @@ function initMap() {
         
     });
 line.setMap(map);
+
+
+
+
+
+
+
+
+
+
+
+
+// Grid Code Start
+
+
+
+var line1 = [
+          {lat: 37.500000, lng: -122.009823},
+          {lat: 37.690000, lng: -122.009823}
+        ];
+
+
+    var grid1 = new google.maps.Polyline({
+        path: line1,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid1.setMap(map);
+
+var line2 = [
+          {lat: 37.500000, lng: -122.010023},
+          {lat: 37.690000, lng: -122.010023}
+        ];
+
+
+    var grid2 = new google.maps.Polyline({
+        path: line2,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid2.setMap(map);
+
+var line3 = [
+          {lat: 37.500000, lng: -122.010223},
+          {lat: 37.690000, lng: -122.010223}
+        ];
+
+
+    var grid3 = new google.maps.Polyline({
+        path: line3,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid3.setMap(map);
+
+var line4 = [
+          {lat: 37.500000, lng: -122.010423},
+          {lat: 37.690000, lng: -122.010423}
+        ];
+
+
+    var grid4 = new google.maps.Polyline({
+        path: line4,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid4.setMap(map);
+
+var line5 = [
+          {lat: 37.500000, lng: -122.009623},
+          {lat: 37.690000, lng: -122.009623}
+        ];
+
+
+    var grid5 = new google.maps.Polyline({
+        path: line5,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid5.setMap(map);
+
+var line6 = [
+          {lat: 37.500000, lng: -122.009423},
+          {lat: 37.690000, lng: -122.009423}
+        ];
+
+
+    var grid6 = new google.maps.Polyline({
+        path: line6,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid6.setMap(map);
+
+var line7 = [
+          {lat: 37.500000, lng: -122.009223},
+          {lat: 37.690000, lng: -122.009223}
+        ];
+
+
+    var grid7 = new google.maps.Polyline({
+        path: line7,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid7.setMap(map);
+
+var line8 = [
+          {lat: 37.500000, lng: -122.009023},
+          {lat: 37.690000, lng: -122.009023}
+        ];
+
+
+    var grid8 = new google.maps.Polyline({
+        path: line8,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid8.setMap(map);
+
+var line9 = [
+          {lat: 37.500000, lng: -122.010623},
+          {lat: 37.690000, lng: -122.010623}
+        ];
+
+
+    var grid9 = new google.maps.Polyline({
+        path: line9,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid9.setMap(map);
+
+var line10 = [
+          {lat: 37.500000, lng: -122.010823},
+          {lat: 37.690000, lng: -122.010823}
+        ];
+
+
+    var grid10 = new google.maps.Polyline({
+        path: line10,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid10.setMap(map);
+
+var line11 = [
+          {lat: 37.500000, lng: -122.008823},
+          {lat: 37.690000, lng: -122.008823}
+        ];
+
+
+    var grid11 = new google.maps.Polyline({
+        path: line11,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid11.setMap(map);
+
+
+
+
+
+
+
+
+
+var line12 = [
+          {lat: 37.601499, lng: -121.000000},
+          {lat: 37.601499, lng: -122.108823}
+        ];
+
+
+    var grid12 = new google.maps.Polyline({
+        path: line12,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid12.setMap(map);
+
+var line13 = [
+          {lat: 37.601699, lng: -121.000000},
+          {lat: 37.601699, lng: -122.108823}
+        ];
+
+
+    var grid13 = new google.maps.Polyline({
+        path: line13,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid13.setMap(map);
+
+var line14 = [
+          {lat: 37.601899, lng: -121.000000},
+          {lat: 37.601899, lng: -122.108823}
+        ];
+
+
+    var grid14 = new google.maps.Polyline({
+        path: line14,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid14.setMap(map);
+
+var line15 = [
+          {lat: 37.602099, lng: -121.000000},
+          {lat: 37.602099, lng: -122.108823}
+        ];
+
+
+    var grid15 = new google.maps.Polyline({
+        path: line15,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid15.setMap(map);
+
+var line16 = [
+          {lat: 37.602299, lng: -121.000000},
+          {lat: 37.602299, lng: -122.108823}
+        ];
+
+
+    var grid16 = new google.maps.Polyline({
+        path: line16,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid16.setMap(map);
+
+var line17 = [
+          {lat: 37.601299, lng: -121.000000},
+          {lat: 37.601299, lng: -122.108823}
+        ];
+
+
+    var grid17 = new google.maps.Polyline({
+        path: line17,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid17.setMap(map);
+
+var line18 = [
+          {lat: 37.601099, lng: -121.000000},
+          {lat: 37.601099, lng: -122.108823}
+        ];
+
+
+    var grid18 = new google.maps.Polyline({
+        path: line18,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid18.setMap(map);
+
+var line19 = [
+          {lat: 37.600899, lng: -121.000000},
+          {lat: 37.600899, lng: -122.108823}
+        ];
+
+
+    var grid19 = new google.maps.Polyline({
+        path: line19,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid19.setMap(map);
+
+var line20 = [
+          {lat: 37.600699, lng: -121.000000},
+          {lat: 37.600699, lng: -122.108823}
+        ];
+
+
+    var grid20 = new google.maps.Polyline({
+        path: line20,
+        visible: true,
+        strokeOpacity: 0.4,
+        strokeColor: 'white', 
+        geodesic: true,
+        strokeWeight: 2
+        
+    });
+grid20.setMap(map);
+
+
+
+// Grid Code End
+
+
+
+
+
+
+
     
     var outerBoundaries = [
         {lat: 37.681647 , lng: -122.173462},

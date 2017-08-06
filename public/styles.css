@@ -203,7 +203,7 @@ body {
     display: inline-block;
     float: left;
     margin-left: 0vw;
-    height: 65vw;
+    height: 110vw;
     width: 50%;
 }
 
@@ -211,7 +211,7 @@ body {
     padding: 2vw;
     display: inline-block;
     width: 50%;
-    height: 65vw;
+    height: 110vw;
     background-color: green;
 }
 
@@ -236,7 +236,7 @@ body {
 /*map page styling*/
 #map {
     width: 50vw;
-    height: 55vw;
+    height: 57vw;
     margin-top: 0.5vw;
     margin-right: 0vw;
     margin-left: 10vw;
@@ -267,7 +267,7 @@ body {
 #mapkeybox{
     background-color: darkseagreen;
     width:25%;
-    height: 55vw;
+    height: 57vw;
     float: right;
     margin-bottom: 10%;
     margin-left: 0vw;
@@ -322,6 +322,7 @@ body {
 
 #keyspecies{
     margin-top: 1.5vw;
+    margin-bottom: 0vw;
     display: inline-block;
     float:left;
 }
