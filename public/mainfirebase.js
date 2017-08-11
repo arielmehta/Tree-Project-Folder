@@ -6,16 +6,16 @@ var config = {
     messagingSenderId: "856800025111"
 };
 
-var trap_number = 0;
+
 var map;
 function initMap() {
 	var mapDiv = document.getElementById('map');
 	map = new google.maps.Map(mapDiv, {
 	    center: {lat: 37.601993, lng: -122.009804},
-	    zoom: 18,
+	    zoom: 19,
 	    scrollwheel:  false,
         mapTypeId: 'satellite',
-        minZoom: 13
+        minZoom: 17
 	    
 	});
     var siteBoundaries = [
@@ -472,39 +472,89 @@ grid20.setMap(map);
 
 }
 
-window.onload = function () {
-	firebase.initializeApp(config);
-	for (var keys in New_Trees){
-		trap_number = trap_number + 1;
-		console.log(trap_number);
-		var lt = New_Trees[keys].Latitude;
-		var lg = New_Trees[keys].Longitude;
-		var latitude = Number(lt);
-		var longitude = Number(lg);
-		var position = {lat: latitude, lng: longitude};
-		var month = New_Trees[keys].Start_Month;
-		var day = New_Trees[keys].Start_Day;
-		var year = New_Trees[keys].Start_Year;
-		var initials = New_Trees[keys].Initials;
-		var label = initials.toString();
-		var adcom = New_Trees[keys].Additional_comments;
-		var species = New_Trees[keys].Species;
-			var iconm = species;
-		var diameter = New_Trees[keys].Diameter;
-		var height = New_Trees[keys].Height;
-		var Adcom = "Tree Species: "+ species +'<div> </div>'
-		+"Tree Diameter: "+ diameter + " cm"+'<div> </div>'
-		+"Tree Height: "+ height +" m"+ '<div> </div>'
-		+ "Comments: " + adcom;
-		var title = "Tree Number: " + trap_number + '<div> </div>' + " Planted By: " + New_Trees[keys].Initials + '<div></div>';
-		var body = " Date Planted: " + month + "/" + day + "/" + year+ '<div> </div>';
-		var contents = title + body + '<div> </div>' + Adcom + '<div> </div>';
+// window.onload = function () {
+// 	firebase.initializeApp(config);
+// 	for (var keys in New_Trees){
+// 		trap_number = trap_number + 1;
+// 		console.log(trap_number);
+// 		var lt = New_Trees[keys].Latitude;
+// 		var lg = New_Trees[keys].Longitude; 
+// 		var latitude = Number(lt);
+// 		var longitude = Number(lg);
+// 		var position = {lat: latitude, lng: longitude}; 
+// 		var month = New_Trees[keys].Start_Month;
+// 		var day = New_Trees[keys].Start_Day;
+// 		var year = New_Trees[keys].Start_Year;
+// 		var initials = New_Trees[keys].Initials;
+// 		var label = initials.toString();
+// 		var adcom = New_Trees[keys].Additional_comments;
+// 		var species = New_Trees[keys].Species;
+// 		var iconm = species;
+// 		var diameter = New_Trees[keys].Diameter;
+// 		var height = New_Trees[keys].Height;
+// 		var Adcom = "Tree Species: "+ species +'<div> </div>'
+// 		+"Tree Diameter: "+ diameter + " cm"+'<div> </div>'
+// 		+"Tree Height: "+ height +" m"+ '<div> </div>'
+// 		+ "Comments: " + adcom;
+// 		var title = "Tree Number: " + trap_number + '<div> </div>' + " Planted By: " + New_Trees[keys].Initials + '<div></div>';
+// 		var body = " Date Planted: " + month + "/" + day + "/" + year+ '<div> </div>';
+// 		var contents = title + body + '<div> </div>' + Adcom + '<div> </div>';
 		// console.log(contents);
 		// console.log(position);
-		addmarkers(position, title, contents, iconm);
-		addyurt();
+		// addmarkers(position, title, contents, iconm);
+		// addyurt();
 		// add landmarks function here
-	};
+	// };
+
+var trap_number = -1;
+  window.onload = function () {
+  firebase.initializeApp(config);
+  for (var keys in New_Trees){
+    trap_number = trap_number + 1;
+    console.log(trap_number);
+
+
+    var name = New_Trees[keys][1];
+    var email = New_Trees[keys][2];
+    var treenumber = New_Trees[keys][3];
+    var species = New_Trees[keys][4];
+    var diameter = New_Trees[keys][5];
+    var height = New_Trees[keys][6];
+    var date = New_Trees[keys][7];
+    var lt = New_Trees[keys][8];
+    var lg = New_Trees[keys][9];
+    var color = New_Trees[keys][10];
+    var shape = New_Trees[keys][12];
+    var ad_comm = New_Trees[keys][13];
+    var pic = New_Trees[keys][14];
+
+    var str = "Click to View Image";
+    var result = str.link(pic);
+
+    var title = "Tree Number: " + trap_number + '<div> </div>' + " Planted By: " + name + '<div></div>';
+    var picture = pic;
+    var body = " Date Planted: " + date +  '<div> </div>';
+    var Adcom = "Tree Species: "+ species +'<div> </div>'
+   +"Tree Diameter: "+ diameter + " cm"+'<div> </div>'
+   +"Tree Height: "+ height +" m"+ '<div> </div>'
+   + "Comments: " + ad_comm + '<div> </div>' + "Image Link: " + result;
+    var contents = title + body + '<div> </div>' + Adcom + '<div> </div>';
+    
+
+
+    var iconm = species;
+
+    var position = {lat: lt, lng: lg};
+    console.log(position);
+
+    addmarkers(position, title, contents, iconm);
+    addyurt();
+    // add landmarks function here
+    
+    
+
+
+  };
 }
 
 var urla = "https://tree-registry.firebaseio.com/New_Trees";//link to node in database in the firebase console
@@ -569,6 +619,7 @@ function addyurt(){
 	});
 };
 function writeStartUserData(){
+	
 	console.log("writing data");
 	var initials = document.getElementById('initials').value;
 	var species = document.getElementById('species').value;
@@ -601,6 +652,9 @@ var New_Trees = {};
 firebaseRefa.on('value', function(snapshot){
 	New_Trees = snapshot.val();
 });
+
+
+
 
 
 

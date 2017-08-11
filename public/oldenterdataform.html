@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    
+        <meta charset="utf-8">
+
+        <!-- Firebase links -->
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+        <script type="text/javascript" src="mainfirebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <title>Enter Data</title>
+            <!-- styling sheets-->
+        <link rel="stylesheet" href="EnterData2.css">
+    </head>
+    
+    <body>
+
+        <div id="container">
+            <h1 style= " font-size: 5vw; margin-left:3vw">Enter Data:</h1>
+                <div id="latlong">
+                    <div id="latlongtext">
+                        <p>Find your latitude and longitude here.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <a href="http://mynasadata.larc.nasa.gov/latitudelongitude-finder/" target="_blank">
+                        <img id="globe" src="Images/globe.png"/>
+                    </a>
+                </div>
+            <div id="form">
+                <form   enctype="multipart/form-data" class = "New_Trees" onsubmit = "writeStartUserData()" action = "success.html" >
+                    Your Name:<br>
+                        <input id= "initials" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                        <br>
+                    Tree Species:<br>
+                        <select id= "species" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw" type="text" name="Initials">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="CoastLiveOak">Coast Live Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="ValleyOak">Valley Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlackOak">Black Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlueOak">Blue Oak</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlackWalnut">Black Walnut</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BigLeafMaple">Big-Leave Maple</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="CaliforniaBayLaurel">California Bay Laurel</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="WesternSycamore">Western Sycamore</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="FremontCottonwood">Fremont Cottonwood</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="RedBud">Red Bud</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="BlueElderberry">Blue Elderberry</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="HollyleafCherry">Hollyleaf Cherry</option> 
+                            <option style="font-family: Abel; font-size: 1.2vw" value="Other">Other (Specify species in comments section)</option> 
+                    </select>
+                        <br>
+                    Diameter of Trunk: (cm)<br>
+                        <input id= "diameter" type = "number" value= "0" step = "0.01" min= "0" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw; height: 2vw; width: 4vw" type="text" name="Initials">
+                        <br>
+                    Height of Tree: (m)<br>
+                        <input id= "height" type = "number" value= "0" min= "0" step = "0.01" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw; margin-bottom: 1vw; height: 2vw; width: 4vw" type="text" name="Initials">
+                        <br>
+
+                    Date:<br>
+                        <select id = "datemonth" style="font-family: Abel; font-size: 1.2vw; margin-top: 0vw;margin-bottom: 1vw" name="Month">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="01">January</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="02">February</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="03">March</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="04">April</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="05">May</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="06">June</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="07">July</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="08">August</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="09">September</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="10">October</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="11">November</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="12">December</option>
+                        </select>
+                        <select id = "dateday" style="font-family: Abel; font-size: 1.2vw" name="Day">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="1">1</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2">2</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="3">3</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="4">4</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="5">5</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="6">6</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="7">7</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="8">8</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="9">9</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="10">10</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="11">11</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="12">12</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="13">13</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="14">14</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="15">15</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="16">16</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="17">17</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="18">18</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="19">19</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="20">20</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="21">21</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="22">22</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="23">23</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="24">24</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="25">25</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="26">26</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="27">27</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="28">28</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="29">29</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="28">30</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="29">31</option>
+                        </select>
+                        <select id = "dateyear" style="font-family: Abel; font-size: 1.2vw" name="Year">
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2016">2016</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2017">2017</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2018">2018</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2019">2019</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2020">2020</option>
+                            <option style="font-family: Abel; font-size: 1.2vw" value="2021">2021</option>
+                        </select>
+                        <br>
+                    Latitude:<br>
+                        <input id = "lat" type = "number" min= "37.000000" value= "37.000000" step= "0.000001" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Latitude">
+                        <br>
+                    Longitude:<br>
+                        <input id= "long" type = "number" min= "-123.000000" value= "-122.000000" step= "0.000001" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude">
+                    <br>
+                    Additional Comments (i.e tree condition)<br>
+                    <textarea id= "adcom" style="font-family: Abel; font-size: 1.2vw; margin-bottom: 1vw" type="text" name="Longitude"></textarea>
+                        <br>
+
+                        <a href="https://script.google.com/macros/s/AKfycbwKW-_TMp-G0SyfufeDh1i3mJQYMQpUzrYi-7JuvcuA9ExBjOxs/exec" target="_blank">Click Here to Sumbit Tree Photo</a>
+                        <br>
+
+
+
+                        <input type="submit" value="Submit" name="submit" id="nextbutton" style=" width: 10vw; height: 5vw; font-family: Abel; font-weight: bold; font-size: 2.5vw" type="submit" value="Submit" disabled= "disabled"/>
+                </form>
+            </div>
+        </div>
+<script>
+    (function() {
+        $('form > input').keyup(function() {
+
+            var empty = false;
+            $('form > input').each(function() {
+                if ($(this).val() == '') {
+                    empty = true;
+                }
+            });
+
+            if (empty) {
+                $('#nextbutton').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+            } else {
+                $('#nextbutton').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+            }
+        });
+    })()
+</script>
+    </body>
+
+</html>

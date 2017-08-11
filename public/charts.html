@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="mainfirebase.js"></script>
+<link rel = "stylesheet" href= "styles.css">
+<link rel = "stylesheet" href= "datastyles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- navigation -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" 
+onclick="closeNav()">&times;</a>
+  <a id="menu" href = "index.html"> Home </a>
+  <a id="menu" href = "login.html"> Enter Data </a>
+  <a id="menu" href = "full_map.html"> Map </a>
+  <a id="menu" href = "charts.html"> Charts </a>
+  <a id="menu" href = "DisplayData.html"> Planted Trees </a>
+  <a id="menu" href = "https://www.msnucleus.org/Masonic/index_masonic1.html" target= "_blank"> About Us</a>
+  <a id="menu" href = "Photos.html"> Brochure </a>
+  <a id="menu" href = "https://www.msnucleus.org/" target="_blank"> MS Nucleus </a>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    };
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+    };
+</script>
+
+
+
+<div id="main">
+    <span style="font-size: 3vw; cursor:pointer"onclick="openNav()"> &#9776;
+    </span>
+</div>
+
+<!-- end of nav-->
+
+<style>
+table {
+    font-family: georgia, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+td, th {
+    border: 5px solid grey;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Charts and Data Analysis</th>
+  </tr>
+  <tr>
+    <td><iframe src="https://docs.google.com/spreadsheets/d/1bQWkJ1tdZX1ambfAjZQbHvxZYCi4jU_lN1YurB4Wh8o/pubchart?oid=1992440896&amp;format=interactive" width="750px" height="375px" frameborder="0" marginheight="0" marginwidth='0'></iframe></td>
+
+  </tr>
+  <tr>
+    <td><iframe src="https://docs.google.com/spreadsheets/d/1bQWkJ1tdZX1ambfAjZQbHvxZYCi4jU_lN1YurB4Wh8o/pubchart?oid=422364945&amp;format=interactive" width="750px" height="375px" frameborder="0" marginheight="0" marginwidth='0'></iframe></td>
+
+  </tr>
+</table>
+
+</body>
+</html>

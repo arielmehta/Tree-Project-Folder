@@ -203,7 +203,7 @@ body {
     display: inline-block;
     float: left;
     margin-left: 0vw;
-    height: 110vw;
+    height: 120vw;
     width: 50%;
 }
 
@@ -211,7 +211,7 @@ body {
     padding: 2vw;
     display: inline-block;
     width: 50%;
-    height: 110vw;
+    height: 120vw;
     background-color: green;
 }
 
